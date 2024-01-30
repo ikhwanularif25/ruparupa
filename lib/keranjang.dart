@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:ruparupa/componen/produk.dart';
 
 class keranjang extends StatefulWidget {
   const keranjang({Key? key}) : super(key: key);
@@ -118,7 +119,7 @@ class _keranjangState extends State<keranjang> {
                         color: Colors.blue,
                         image: DecorationImage(
                           image: NetworkImage(
-                            "https://images.unsplash.com/photo-1533050487297-09b450131914?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                            "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxhbXB8ZW58MHx8MHx8fDA%3D",
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -203,116 +204,36 @@ class _keranjangState extends State<keranjang> {
                   ),
                 ],
               ),
+              const SizedBox(
+              height: 20.0,
+              ),
               Text(
                 "Produk yang Mungkin Anda Suka",
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
                 ),
+              ),
+              const SizedBox(
+              height: 20.0,
               ),
               SizedBox(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      height: 300,
-                      width: 160,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            height: 160,
-                            width: 160,
-                            decoration: const BoxDecoration(
-                              color: Colors.purple,
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://images.unsplash.com/photo-1533050487297-09b450131914?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  top: 0,
-                                  right: 0,
-                                  child: Icon(
-                                    Icons.favorite_border,
-                                    size: 24.0,
-                                    color: Colors.red,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Text(
-                            "text",
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                          Text(
-                            "text",
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                          Text(
-                            "Rp.",
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                          ),
-                          SizedBox(
-                            child: Row(
-                              children: [
-                                const Icon(
-                                  Icons.star,
-                                  size: 24.0,
-                                ),
-                                Text(
-                                  "5 | Ulasan",
-                                  style: TextStyle(
-                                    fontSize: 12.0,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              fixedSize: Size(150, 10),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                                side: BorderSide(
-                                  color: Colors.orange,
-                                  width: 0,
-                                ),
-                              ),
-                              padding: EdgeInsets
-                                  .zero, // Menghapus padding bawaan tombol
-                            ),
-                            onPressed: () {},
-                            child: Text(
-                              "text",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                color: Colors.orange,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                    Produk(
+                      gproduk: 'https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhaXJ8ZW58MHx8MHx8fDA%3D',
+                      namaproduk: 'Topaz Meja Tamu Dengan Penyimpanan - Gold',
+                      harga: 'Rp119.00' ,
                     ),
                     const SizedBox(
                       width: 10.0,
                     ),
-                    Container(
-                      height: 250,
-                      width: 160,
-                      decoration: const BoxDecoration(
-                        color: Colors.red,
-                      ),
-                    ),
+                    Produk(
+                      gproduk: 'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFtcHxlbnwwfHwwfHx8MA%3D%3D',
+                      namaproduk: 'Eglo Up-li Lampu Lantai - Putih',
+                      harga: '250.000',
+                    )
                   ],
                 ),
               ),
@@ -323,3 +244,4 @@ class _keranjangState extends State<keranjang> {
     );
   }
 }
+
