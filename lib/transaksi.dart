@@ -21,7 +21,14 @@ class _transaksiscreenState extends State<transaksiscreen> {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: [],
+            children: [
+              Text(
+                "transaksi",
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+            ],
           ),
         ),
       ),
