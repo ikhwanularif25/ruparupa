@@ -60,15 +60,15 @@ class _keranjangState extends State<keranjang> {
                     Text(
                       "Pilih Semua",
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 12.0,
                         color: Colors.grey,
                       ),
                     ),
                     Spacer(),
                     Text(
-                      "text | text",
+                      "Pindahkan ke Wishlist | List",
                       style: TextStyle(
-                        fontSize: 16.0,
+                        fontSize: 12.0,
                         color: Colors.grey,
                       ),
                     ),
@@ -88,9 +88,11 @@ class _keranjangState extends State<keranjang> {
                       activeColor: Colors.orange, // Warna ketika checkbox aktif
                     ),
                     Text(
-                      "text",
+                      "Diproses dari Toko Terdekat",
                       style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey,
                       ),
                     ),
                   ],
@@ -125,19 +127,24 @@ class _keranjangState extends State<keranjang> {
                     Column(
                       children: [
                         Text(
-                          "text",
+                          "Neo Dacey Kursi Kafe - Putih",
                           style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 12.0,
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         const SizedBox(
                           height: 40.0,
                         ),
                         Text(
-                          "text",
+                          "Rp 285.000",
                           style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 12.0,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
                           ),
+                          textAlign: TextAlign.left,
                         ),
                       ],
                     ),
@@ -183,10 +190,11 @@ class _keranjangState extends State<keranjang> {
                     width: 50.0,
                   ),
                   Text(
-                    "text",
+                    "Tambah catatan",
                     style: TextStyle(
-                      fontSize: 20.0,
+                      fontSize: 16.0,
                       color: Colors.orange,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
