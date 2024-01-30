@@ -2,19 +2,19 @@
 
 import 'package:flutter/material.dart';
 
-class test extends StatefulWidget {
-  const test({Key? key}) : super(key: key);
+class berandascreen extends StatefulWidget {
+  const berandascreen({Key? key}) : super(key: key);
 
   @override
-  State<test> createState() => _testState();
+  State<berandascreen> createState() => _berandascreenState();
 }
 
-class _testState extends State<test> {
+class _berandascreenState extends State<berandascreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("blablabl"),
+        title: const Text("Dashboard"),
         actions: const [],
       ),
       body: SingleChildScrollView(
