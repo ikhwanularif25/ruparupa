@@ -124,9 +124,6 @@ class _keranjangState extends State<keranjang> {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                    width: 10.0,
-                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -202,6 +199,81 @@ class _keranjangState extends State<keranjang> {
                     ),
                   ),
                 ],
+              ),
+              Text(
+                "text",
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+              SizedBox(
+                child: Row(
+                  children: [
+                    Container(
+                      height: 250,
+                      width: 160,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 160,
+                            width: 160,
+                            decoration: const BoxDecoration(
+                              color: Colors.purple,
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  "https://images.unsplash.com/photo-1533050487297-09b450131914?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            "text",
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                          Text(
+                            "text",
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              fixedSize: Size(150, 12),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                                side: BorderSide(
+                                  color: Colors.orange,
+                                  width: 0,
+                                ),
+                              ),
+                              padding: EdgeInsets
+                                  .zero, // Menghapus padding bawaan tombol
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              "text",
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.orange,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 250,
+                      width: 160,
+                      decoration: const BoxDecoration(
+                        color: Colors.red,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
