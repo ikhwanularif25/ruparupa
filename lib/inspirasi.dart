@@ -291,9 +291,55 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
               ),
               Text(
                 "Shop the Look",
-                style: TextStyle(
-                  fontSize: 10.0,
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                height: 35,
+                width: double.infinity,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
+                      height: 35,
+                      width: 140,
+                      decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(5)),
+                    ),
+                    const SizedBox(
+                      width: 20.0,
+                    ),
+                    Container(
+                      height: 30,
+                      width: 140,
+                      decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(5)),
+                    ),
+                    const SizedBox(
+                      width: 20.0,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 140,
+                      decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(5)),
+                    ),
+                  ],
                 ),
+              ),
+              const SizedBox(
+                height: 15.0,
+              ),
+              Container(
+                height: 230,
+                width: 340,
+                decoration: BoxDecoration(
+                    color: Colors.blue, borderRadius: BorderRadius.circular(5)),
               ),
             ],
           ),
