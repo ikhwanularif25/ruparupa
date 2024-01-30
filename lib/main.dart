@@ -33,7 +33,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.blue,
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.orange[400],
+        unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -52,6 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'akun',
           ),
         ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
       ),
     );
   }

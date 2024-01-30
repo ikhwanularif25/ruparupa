@@ -21,7 +21,14 @@ class _berandascreenState extends State<berandascreen> {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: [],
+            children: [
+              Text(
+                "beranda",
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+            ],
           ),
         ),
       ),
