@@ -124,6 +124,9 @@ class _keranjangState extends State<keranjang> {
                         ),
                       ),
                     ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -210,7 +213,7 @@ class _keranjangState extends State<keranjang> {
                 child: Row(
                   children: [
                     Container(
-                      height: 250,
+                      height: 300,
                       width: 160,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -240,9 +243,31 @@ class _keranjangState extends State<keranjang> {
                               fontSize: 16.0,
                             ),
                           ),
+                          Text(
+                            "Rp.",
+                            style: TextStyle(
+                              fontSize: 16.0,
+                            ),
+                          ),
+                          SizedBox(
+                            child: Row(
+                              children: [
+                                const Icon(
+                                  Icons.star,
+                                  size: 24.0,
+                                ),
+                                Text(
+                                  "5 | Ulasan",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              fixedSize: Size(150, 12),
+                              fixedSize: Size(150, 10),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                                 side: BorderSide(
