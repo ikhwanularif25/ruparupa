@@ -92,7 +92,7 @@ class _transaksiscreenState extends State<transaksiscreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        "assets//images/icon.png",
+                        "assets/images/icon.png",
                         width: 16.0,
                         height: 16.0,
                         fit: BoxFit.fill,
