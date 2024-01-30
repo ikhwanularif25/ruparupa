@@ -290,7 +290,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 height: 20.0,
               ),
               Text(
-                "Shop the LOOK",
+                "Shop the Look",
                 style: TextStyle(
                   fontSize: 10.0,
                 ),
