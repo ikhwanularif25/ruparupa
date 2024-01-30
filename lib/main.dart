@@ -35,12 +35,22 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.blue,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'beranda'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.image_search_outlined), label: 'inspirasi'),
+            icon: Icon(Icons.home),
+            label: 'beranda',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.source_rounded), label: 'transaksi'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'akun'),
+            icon: Icon(Icons.image_search_outlined),
+            label: 'inspirasi',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.source_rounded),
+            label: 'transaksi',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'akun',
+          ),
         ],
       ),
     );
