@@ -326,7 +326,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       height: 100,
                       width: 140,
                       decoration: BoxDecoration(
-                          color: Colors.orange,
+                          color: Color.fromARGB(255, 219, 196, 160),
                           borderRadius: BorderRadius.circular(5)),
                     ),
                   ],
