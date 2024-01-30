@@ -265,6 +265,9 @@ class _keranjangState extends State<keranjang> {
                         ],
                       ),
                     ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
                     Container(
                       height: 250,
                       width: 160,
