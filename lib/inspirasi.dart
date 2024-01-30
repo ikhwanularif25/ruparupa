@@ -212,70 +212,70 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(15)),
               ),
-              Text(
-                "Shop in Shop",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
+              ),
+              Text("Shop in Shop",
+              style: TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold,
+              ),
               ),
               Container(
-                padding: EdgeInsets.all(10),
-                height: 200,
-                width: 400,
+              padding: EdgeInsets.all(10),
+              height: 200,
+              width: 400,
+              decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(15)
+              ),
+              child: Row(
+              children: [
+                Container(
+                height: 180,
+                width: 160,
                 decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(15)),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 180,
-                      width: 160,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            "text",
-                            style: TextStyle(
-                              fontSize: 20.0,
-                            ),
-                          ),
-                          Text(
-                            "text",
-                            style: TextStyle(
-                              fontSize: 15.0,
-                            ),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              minimumSize: Size(double.infinity, 30),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(0.0),
-                                  side: BorderSide(
-                                    color: Colors.grey,
-                                    width: 0,
-                                  )),
-                              padding: EdgeInsets.zero,
-                              backgroundColor: Colors.blueGrey,
-                            ),
-                            onPressed: () {},
-                            child: const Text("Save"),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Spacer(),
-                    Container(
-                      height: 180,
-                      width: 180,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
+                color: Colors.white,
                 ),
+                child: Column(
+                children: [
+                  Text("text",
+                  style: TextStyle(
+                  fontSize: 20.0,
+                  ),
+                  ),
+                  Text("text",
+                  style: TextStyle(
+                  fontSize: 15.0,
+                  ),
+                  ),
+                  ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                  minimumSize: Size(double.infinity,30),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(0.0),
+                    side: BorderSide(
+                      color: Colors.grey,
+                      width: 0,
+                    )
+                  ),
+                  padding: EdgeInsets.zero,
+                  backgroundColor: Colors.blueGrey,
+                  ),
+                  onPressed: () {},
+                  child: const Text("Save"),
+                  ),
+                ],
+                ),
+                ),
+                Spacer(),
+                Container(
+                height: 180,
+                width: 180,
+                decoration: BoxDecoration(
+                color: Colors.white,
+                ),
+                ),
+              ],
+              ),
               ),
             ],
           ),

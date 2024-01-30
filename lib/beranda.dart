@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:ruparupa/keranjang.dart';
 
 class berandascreen extends StatefulWidget {
   const berandascreen({Key? key}) : super(key: key);
@@ -65,9 +66,19 @@ class _berandascreenState extends State<berandascreen> {
                           Icons.developer_board,
                           size: 24.0,
                         ),
-                        const Icon(
-                          Icons.developer_board,
-                          size: 24.0,
+                        InkWell(
+                          onTap: () {
+                            // Navigasi ke halaman keranjang di sini
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => keranjang()),
+                            );
+                          },
+                          child: const Icon(
+                            Icons.shopping_cart,
+                            size: 24.0,
+                          ),
                         ),
                       ],
                     ),
