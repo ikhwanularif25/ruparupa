@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class tes extends StatefulWidget {
-  const tes({Key? key}) : super(key: key);
+class transaksiscreen extends StatefulWidget {
+  const transaksiscreen({Key? key}) : super(key: key);
 
   @override
-  State<tes> createState() => _tesState();
+  State<transaksiscreen> createState() => _transaksiscreenState();
 }
 
-class _tesState extends State<tes> {
+class _transaksiscreenState extends State<transaksiscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
