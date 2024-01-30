@@ -201,7 +201,7 @@ class _keranjangState extends State<keranjang> {
                 ],
               ),
               Text(
-                "text",
+                "Produk yang Mungkin Anda Suka",
                 style: TextStyle(
                   fontSize: 20.0,
                 ),
