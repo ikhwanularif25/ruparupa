@@ -243,6 +243,35 @@ class _keranjangState extends State<keranjang> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: Container(
+                  height: 50,
+                  color: Colors.orange, // Warna kontainer yang sticky
+                  child: Column(
+                    children: [
+                      Center(
+                        child: Text(
+                          'Lanjut Ke Pembayaran',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
