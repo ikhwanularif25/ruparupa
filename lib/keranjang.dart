@@ -230,6 +230,19 @@ class _keranjangState extends State<keranjang> {
                                 fit: BoxFit.cover,
                               ),
                             ),
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.favorite_border,
+                                    size: 24.0,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           Text(
                             "text",
