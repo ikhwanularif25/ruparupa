@@ -252,7 +252,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                           Text(
                             "Temukan solusi penyimpanan untuk semua ruangan agar rumah tetap rapi setiap saat",
                             style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.bold),
+                                fontSize: 10.5, fontWeight: FontWeight.bold),
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -278,16 +278,21 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       ),
                     ),
                     Spacer(),
-                    Container(
-                      height: 180,
-                      width: 205,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blue,
-                      ),
-                      child: Image.asset('assets/images/living.jpg'),
-                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset('assets/images/living.jpg',
+                          fit: BoxFit.cover, height: 180, width: 205),
+                    )
                   ],
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Text(
+                "Shop the LOOK",
+                style: TextStyle(
+                  fontSize: 10.0,
                 ),
               ),
             ],
