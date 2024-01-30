@@ -306,28 +306,43 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       height: 35,
                       width: 140,
                       decoration: BoxDecoration(
-                          color: Colors.orange,
+                          color: Color.fromARGB(255, 209, 90, 10),
                           borderRadius: BorderRadius.circular(5)),
+                      child: Center(
+                          child: Text(
+                        "Festive Feast at Home",
+                        style: TextStyle(color: Colors.white, fontSize: 12),
+                      )),
                     ),
                     const SizedBox(
-                      width: 20.0,
+                      width: 15.0,
                     ),
                     Container(
                       height: 30,
                       width: 140,
                       decoration: BoxDecoration(
-                          color: Colors.orange,
+                          color: Color.fromARGB(255, 209, 90, 10),
                           borderRadius: BorderRadius.circular(5)),
+                      child: Center(
+                          child: Text(
+                        "Gift for loved Ones",
+                        style: TextStyle(color: Colors.white, fontSize: 12),
+                      )),
                     ),
                     const SizedBox(
-                      width: 20.0,
+                      width: 15.0,
                     ),
                     Container(
                       height: 100,
                       width: 140,
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 219, 196, 160),
+                          color: Color.fromARGB(255, 209, 90, 10),
                           borderRadius: BorderRadius.circular(5)),
+                      child: Center(
+                          child: Text(
+                        "Gift Ideas for Month",
+                        style: TextStyle(color: Colors.white, fontSize: 12),
+                      )),
                     ),
                   ],
                 ),
@@ -336,7 +351,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 height: 15.0,
               ),
               Container(
-                height: 230,
+                height: 220,
                 width: 340,
                 decoration: BoxDecoration(
                     color: Colors.blue, borderRadius: BorderRadius.circular(5)),
