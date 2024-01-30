@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
+// ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -252,7 +252,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                           Text(
                             "Temukan solusi penyimpanan untuk semua ruangan agar rumah tetap rapi setiap saat",
                             style: TextStyle(
-                                fontSize: 10.0, fontWeight: FontWeight.bold),
+                                fontSize: 10.5, fontWeight: FontWeight.bold),
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -278,17 +278,68 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       ),
                     ),
                     Spacer(),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset('assets/images/living.jpg',
+                          fit: BoxFit.cover, height: 180, width: 205),
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Text(
+                "Shop the Look",
+                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                height: 35,
+                width: double.infinity,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
                     Container(
-                      height: 180,
-                      width: 205,
+                      height: 35,
+                      width: 140,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blue,
-                      ),
-                      child: Image.asset('assets/images/living.jpg'),
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(5)),
+                    ),
+                    const SizedBox(
+                      width: 20.0,
+                    ),
+                    Container(
+                      height: 30,
+                      width: 140,
+                      decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(5)),
+                    ),
+                    const SizedBox(
+                      width: 20.0,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 140,
+                      decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(5)),
                     ),
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 15.0,
+              ),
+              Container(
+                height: 230,
+                width: 340,
+                decoration: BoxDecoration(
+                    color: Colors.blue, borderRadius: BorderRadius.circular(5)),
               ),
             ],
           ),
