@@ -687,7 +687,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                                 ElevatedButton(
                                   onPressed: () {},
                                   child: const Text(
-                                    "Lihat Selengkapnya",
+                                    "Lihat Selengkapna",
                                     style: TextStyle(
                                         color: Colors.black, fontSize: 10),
                                   ),
