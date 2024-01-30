@@ -33,15 +33,29 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.blue,
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.orange[400],
+        unselectedItemColor: Colors.grey,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'beranda'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.image_search_outlined), label: 'inspirasi'),
+            icon: Icon(Icons.home),
+            label: 'beranda',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.source_rounded), label: 'transaksi'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'akun'),
+            icon: Icon(Icons.image_search_outlined),
+            label: 'inspirasi',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.source_rounded),
+            label: 'transaksi',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'akun',
+          ),
         ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
       ),
     );
   }

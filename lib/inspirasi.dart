@@ -21,7 +21,14 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: [],
+            children: [
+              Text(
+                "inspirasi",
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+            ],
           ),
         ),
       ),

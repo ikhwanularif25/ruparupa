@@ -21,7 +21,14 @@ class _akunscreenState extends State<akunscreen> {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: [],
+            children: [
+              Text(
+                "akun",
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+            ],
           ),
         ),
       ),
