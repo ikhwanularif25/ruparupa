@@ -205,7 +205,7 @@ class _keranjangState extends State<keranjang> {
                 ],
               ),
               const SizedBox(
-              height: 20.0,
+                height: 20.0,
               ),
               Text(
                 "Produk yang Mungkin Anda Suka",
@@ -215,22 +215,24 @@ class _keranjangState extends State<keranjang> {
                 ),
               ),
               const SizedBox(
-              height: 20.0,
+                height: 20.0,
               ),
               SizedBox(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Produk(
-                      gproduk: 'https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhaXJ8ZW58MHx8MHx8fDA%3D',
+                      gproduk:
+                          'https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhaXJ8ZW58MHx8MHx8fDA%3D',
                       namaproduk: 'Topaz Meja Tamu Dengan Penyimpanan - Gold',
-                      harga: 'Rp119.00' ,
+                      harga: 'Rp119.00',
                     ),
                     const SizedBox(
                       width: 10.0,
                     ),
                     Produk(
-                      gproduk: 'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFtcHxlbnwwfHwwfHx8MA%3D%3D',
+                      gproduk:
+                          'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFtcHxlbnwwfHwwfHx8MA%3D%3D',
                       namaproduk: 'Eglo Up-li Lampu Lantai - Putih',
                       harga: '250.000',
                     )
@@ -244,4 +246,3 @@ class _keranjangState extends State<keranjang> {
     );
   }
 }
-

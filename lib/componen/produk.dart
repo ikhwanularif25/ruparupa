@@ -15,7 +15,7 @@ class Produk extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 320,
+      height: 300,
       width: 160,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +72,7 @@ class Produk extends StatelessWidget {
               children: [
                 const Icon(
                   Icons.star,
-                  size: 24.0,
+                  size: 16.0,
                 ),
                 Text(
                   "5 | 540 Ulasan",
@@ -84,8 +84,9 @@ class Produk extends StatelessWidget {
             ),
           ),
           const SizedBox(
-          height: 20.0,
+            height: 20.0,
           ),
+          Spacer(),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               fixedSize: Size(150, 40),
