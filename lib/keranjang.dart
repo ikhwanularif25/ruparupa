@@ -128,6 +128,7 @@ class _keranjangState extends State<keranjang> {
                       width: 10.0,
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "Neo Dacey Kursi Kafe - Putih",
