@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:ruparupa/componen/inspiraasi.dart';
 
 class inspirasiscreen extends StatefulWidget {
   const inspirasiscreen({Key? key}) : super(key: key);
@@ -214,9 +215,32 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 padding: const EdgeInsets.all(15.0),
                 child: Row(
                   children: [
-                    ide1(),
+                    ide1(
+                      gambar: 'assets/images/inp1.png',
+                      nama: 'Celcio & Co Pemanggang \nArang Bbq Square',
+                      hargadiskon: '',
+                      diskon: '',
+                      harga: 'Rp1.499.000',
+                      icon: "assets/images/info.png",
+                      ket: "Voucher Diskon",
+                      ketColor1: Colors.red,
+                      ketColor2: Colors.red,
+                      discolor: Colors.white,
+                    ),
                     Spacer(),
-                    ide1(),
+                    ide1(
+                      gambar: 'assets/images/inp1.png',
+                      nama: 'Celcio & Co Set Peralatan \nBbq 3 Pcs - Hitam',
+                      hargadiskon: '249.100',
+                      diskon: '10%',
+                      harga: 'Rp224.100',
+                      icon: "assets/images/star.png",
+                      ket: "5 | 1 Ulasan",
+                      icon2: 'assets/images/car.png',
+                      ket2: 'Sameday & Instant',
+                      ketColor2: const Color.fromARGB(255, 101, 101, 101),
+                      discolor: const Color.fromARGB(255, 159, 42, 33),
+                    ),
                   ],
                 ),
               ),
@@ -878,85 +902,6 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class ide1 extends StatelessWidget {
-  const ide1({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 180,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                width: 15.0,
-              ),
-              Image.asset(
-                "assets/images/inp1.png",
-                width: 110.0,
-                height: 120.0,
-                fit: BoxFit.fill,
-              ),
-              Image.asset(
-                "assets/images/like2.png",
-                width: 20.0,
-                height: 20.0,
-                fit: BoxFit.fill,
-                color: Colors.red,
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 10.0,
-          ),
-          Text(
-            "Celcio & Co Pemanggang \nArang Bbq Square",
-            style: TextStyle(
-              fontSize: 13.0,
-              height: 1.2,
-            ),
-          ),
-          const SizedBox(
-            height: 20.0,
-          ),
-          Text(
-            "Rp1.499.000",
-            style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Row(
-            children: [
-              const Icon(
-                Icons.info_outline,
-                size: 20.0,
-                color: Colors.red,
-              ),
-              const SizedBox(
-                width: 10.0,
-              ),
-              Text(
-                "Voucher Diskon",
-                style: TextStyle(
-                  fontSize: 15.0,
-                  color: Colors.red,
-                ),
-              ),
-            ],
-          ),
-        ],
       ),
     );
   }
