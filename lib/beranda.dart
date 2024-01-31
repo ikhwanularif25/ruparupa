@@ -1,7 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ruparupa/keranjang.dart';
-import 'package:ruparupa/widgets/column_beranda.dart';
+import 'package:ruparupa/widgets/beranda/banner_iklan.dart';
+import 'package:ruparupa/widgets/beranda/column_beranda.dart';
+import 'package:ruparupa/widgets/beranda/tombol_offers.dart';
 
 class berandascreen extends StatefulWidget {
   @override
@@ -139,25 +141,9 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          "assets/img7.jpg",
-                          width: 300.0,
-                          height: 120.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                      BannerIklan(img: "assets/img7.jpg"),
                       SizedBox(width: 25.0),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          "assets/img8.jpg",
-                          width: 300.0,
-                          height: 120.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                      BannerIklan(img: "assets/img8.jpg"),
                     ],
                   ),
                 ),
@@ -183,41 +169,25 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.orange,
-                          ),
-                          child: Text(
-                            "Weekend Deals",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          )),
+                      TombolOffers(
+                          colorBg: Colors.orange,
+                          colorText: Colors.white,
+                          text: "Weekend Deals"),
                       SizedBox(width: 7.0),
-                      ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                          ),
-                          child: Text(
-                            "Gopay Payday",
-                            style: TextStyle(
-                              color: Colors.orange,
-                            ),
-                          )),
+                      TombolOffers(
+                          colorBg: Colors.white,
+                          colorText: Colors.orange,
+                          text: "Gopay Payday"),
                       SizedBox(width: 7.0),
-                      ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                          ),
-                          child: Text(
-                            "Spesial Online",
-                            style: TextStyle(
-                              color: Colors.orange,
-                            ),
-                          ))
+                      TombolOffers(
+                          colorBg: Colors.white,
+                          colorText: Colors.orange,
+                          text: "Special Online"),
+                      SizedBox(width: 7.0),
+                      TombolOffers(
+                          colorBg: Colors.white,
+                          colorText: Colors.orange,
+                          text: "Penawaran Lainnya"),
                     ],
                   ),
                 )
