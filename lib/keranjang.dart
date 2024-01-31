@@ -268,10 +268,16 @@ class _keranjangState extends State<keranjang> {
                           // Aksi saat tombol ditekan
                         },
                         style: ElevatedButton.styleFrom(
+                          minimumSize: Size(
+                              double.infinity, 30), // Set minimum button size
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                          ),
+                          padding: EdgeInsets.zero,
                           primary: Colors.orange, // Warna tombol
                         ),
                         child: Text(
-                          'Tombol Oranye',
+                          'Lanjut ke Pembayaran',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16.0,
