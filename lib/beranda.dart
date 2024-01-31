@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
+// ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:ruparupa/keranjang.dart';
@@ -63,7 +63,7 @@ class _berandascreenState extends State<berandascreen> {
                         ),
                         Spacer(),
                         const Icon(
-                          Icons.developer_board,
+                          Icons.notifications,
                           size: 24.0,
                         ),
                         InkWell(
