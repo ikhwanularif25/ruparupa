@@ -226,6 +226,8 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       ketColor1: Colors.red,
                       ketColor2: Colors.red,
                       discolor: Colors.white,
+                      icon2: '',
+                      ket2: '',
                     ),
                     Spacer(),
                     ide1(
