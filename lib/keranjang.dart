@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:ruparupa/componen/produk.dart';
 import 'package:ruparupa/componen/total.dart';
+import 'package:ruparupa/pembayaran.dart';
 
 class keranjang extends StatefulWidget {
   const keranjang({Key? key}) : super(key: key);
@@ -265,7 +266,11 @@ class _keranjangState extends State<keranjang> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          // Aksi saat tombol ditekan
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => pembayaran()),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           minimumSize: Size(
