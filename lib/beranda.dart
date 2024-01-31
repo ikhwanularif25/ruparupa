@@ -63,7 +63,7 @@ class _berandascreenState extends State<berandascreen> {
                         ),
                         Spacer(),
                         const Icon(
-                          Icons.developer_board,
+                          Icons.notifications,
                           size: 24.0,
                         ),
                         InkWell(
