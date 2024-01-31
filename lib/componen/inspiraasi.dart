@@ -142,7 +142,6 @@ class ide1 extends StatelessWidget {
                 width: 20.0,
                 height: 20.0,
                 fit: BoxFit.fill,
-                color: ketColor1,
               ),
               const SizedBox(
                 width: 10.0,
