@@ -345,11 +345,40 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                   ),
                 ],
               ),
-              Text(
-                "Shop in Shop",
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 5,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        color: Color.fromARGB(130, 121, 85, 72),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      "Shop in Shop",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      height: 5,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        color: Color.fromARGB(130, 121, 85, 72),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               shopinshop(
@@ -370,14 +399,43 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 color: Color.fromARGB(221, 217, 228, 234),
               ),
               const SizedBox(
-                height: 20.0,
+                height: 10.0,
               ),
-              Text(
-                "Shop the Look",
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(
-                height: 20.0,
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 5,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        color: Color.fromARGB(130, 121, 85, 72),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      "Shop the Look",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      height: 5,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        color: Color.fromARGB(130, 121, 85, 72),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -498,15 +556,41 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                   style: TextStyle(color: Colors.white, fontSize: 15),
                 ),
               ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Text(
-                "Tips & Recommendation",
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w800),
-              ),
-              const SizedBox(
-                height: 5.0,
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 5,
+                      width: 55,
+                      decoration: const BoxDecoration(
+                        color: Color.fromARGB(130, 121, 85, 72),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      "Tips & Recommendation",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Container(
+                      height: 5,
+                      width: 55,
+                      decoration: const BoxDecoration(
+                        color: Color.fromARGB(130, 121, 85, 72),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Container(
                 height: 290,
