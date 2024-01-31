@@ -1,13 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ruparupa/keranjang.dart';
-<<<<<<< HEAD
 import 'package:ruparupa/widgets/beranda/banner_iklan.dart';
 import 'package:ruparupa/widgets/beranda/column_beranda.dart';
 import 'package:ruparupa/widgets/beranda/tombol_offers.dart';
-=======
 import 'package:ruparupa/pencarian.dart';
->>>>>>> 65905e7220722cb33320cb521d5163301afc8f3b
 
 class berandascreen extends StatefulWidget {
   @override
@@ -120,131 +117,20 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Column(
-                        children: [
-                          Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: Colors.grey, // Warna border
-                                width: 0.5,
-                              ),
-                            ),
-                            child: Icon(Icons.content_cut),
-                          ),
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          Text("Gunting")
-                        ],
-                      ),
-                      SizedBox(width: 25.0),
-                      Column(
-                        children: [
-                          Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: Colors.grey, // Warna border
-                                width: 0.5,
-                              ),
-                            ),
-                            child: Icon(Icons.home),
-                          ),
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          Text("Rumah Tangga")
-                        ],
-                      ),
-                      SizedBox(width: 25.0),
-                      Column(
-                        children: [
-                          Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: Colors.grey, // Warna border
-                                width: 0.5,
-                              ),
-                            ),
-                            child: Icon(Icons.phone),
-                          ),
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          Text("Telepon Rumah")
-                        ],
-                      ),
-                      SizedBox(width: 25.0),
-                      Column(
-                        children: [
-                          Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: Colors.grey, // Warna border
-                                width: 0.5,
-                              ),
-                            ),
-                            child: Icon(Icons.content_cut),
-                          ),
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          Text("Gunting")
-                        ],
-                      ),
-                      SizedBox(width: 25.0),
-                      Column(
-                        children: [
-                          Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: Colors.grey, // Warna border
-                                width: 0.5,
-                              ),
-                            ),
-                            child: Icon(Icons.home),
-                          ),
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          Text("Rumah Tangga")
-                        ],
-                      ),
-                      SizedBox(width: 25.0),
-                      Column(
-                        children: [
-                          Container(
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              border: Border.all(
-                                color: Colors.grey, // Warna border
-                                width: 0.5,
-                              ),
-                            ),
-                            child: Icon(Icons.phone),
-                          ),
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          Text("Telepon Rumah")
-                        ],
-                      ),
+                      CustomIconColumn(iconData: Icons.person, text: "Hello"),
+                      SizedBox(width: 15.0),
+                      CustomIconColumn(iconData: Icons.home, text: "Rumah"),
+                      SizedBox(width: 15.0),
+                      CustomIconColumn(iconData: Icons.phone, text: "Telpon"),
+                      SizedBox(width: 15.0),
+                      CustomIconColumn(
+                          iconData: Icons.beach_access, text: "Pantai"),
+                      SizedBox(width: 15.0),
+                      CustomIconColumn(
+                          iconData: Icons.science_sharp, text: "Kimia"),
+                      SizedBox(width: 15.0),
+                      CustomIconColumn(
+                          iconData: Icons.bookmark, text: "Favorit"),
                     ],
                   ),
                 ),
