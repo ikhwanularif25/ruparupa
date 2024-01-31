@@ -70,9 +70,10 @@ class Produk extends StatelessWidget {
             height: 10,
             child: Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.star,
-                  size: 16.0,
+                  size: 12.0,
+                  color: Colors.yellow[800],
                 ),
                 Text(
                   "5 | 540 Ulasan",

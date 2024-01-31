@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ruparupa/componen/produk.dart';
+import 'package:ruparupa/componen/total.dart';
 
 class keranjang extends StatefulWidget {
   const keranjang({Key? key}) : super(key: key);
@@ -243,23 +244,37 @@ class _keranjangState extends State<keranjang> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Padding(
-          padding: EdgeInsets.all(16.0),
+      bottomNavigationBar: SizedBox(
+        height: 104.0,
+        child: BottomAppBar(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
                 child: Container(
-                  height: 50,
-                  color: Colors.orange, // Warna kontainer yang sticky
-                  child: Column(
+                  height: MediaQuery.of(context).size.height,
+                  child: ListView(
                     children: [
-                      Center(
+                      total(
+                        totalproduk: 'Total Pesanan',
+                        totalharga: '1',
+                      ),
+                      total(
+                        totalproduk: 'Total Harga',
+                        totalharga: 'Rp285.000',
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          // Aksi saat tombol ditekan
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.orange, // Warna tombol
+                        ),
                         child: Text(
-                          'Lanjut Ke Pembayaran',
+                          'Tombol Oranye',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
