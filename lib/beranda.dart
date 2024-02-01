@@ -3,6 +3,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ruparupa/keranjang.dart';
+import 'package:ruparupa/pencarian.dart';
 
 class berandascreen extends StatefulWidget {
   @override
@@ -345,7 +346,15 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     filled: true,
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => pencarian()),
+                          );
+                        },
+                        child: Icon(Icons.search)),
                     hintText: 'Cari Barang Apa?',
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
