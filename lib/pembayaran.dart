@@ -5,6 +5,7 @@ import 'package:ruparupa/componen/bayarproduk.dart';
 import 'package:ruparupa/componen/dikirim.dart';
 import 'package:ruparupa/componen/ekspedisi.dart';
 import 'package:ruparupa/componen/rincianpembayaran.dart';
+import 'package:ruparupa/metodepembayaran.dart';
 
 class pembayaran extends StatefulWidget {
   const pembayaran({Key? key}) : super(key: key);
@@ -87,7 +88,13 @@ class _pembayaranState extends State<pembayaran> {
                         ),
                         Spacer(), // Jarak antara teks dan tombol
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => metodepembayaran()),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             minimumSize: Size(140, 30), // Set ukuran tombol
                             shape: RoundedRectangleBorder(
