@@ -33,11 +33,11 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 5),
                   height: 33,
-                  width: 300,
+                  width: 270,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                      color: Colors.grey, // Lebar border
+                      color: Colors.grey, // Border color
                     ),
                   ),
                   child: Padding(
@@ -48,17 +48,16 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                         Icon(
                           Icons.search,
                           color: Colors.orange,
-                          size: 17,
+                          size: 20,
                         ),
-                        SizedBox(width: 5),
+                        SizedBox(width: 7),
                         Expanded(
                           child: TextField(
                             decoration: InputDecoration(
                               hintText: 'Cari akhir tahun hemat hingga 50%',
                               hintStyle:
-                                  TextStyle(color: Colors.grey, fontSize: 14),
+                                  TextStyle(color: Colors.grey, fontSize: 13),
                               border: InputBorder.none,
-                              contentPadding: EdgeInsets.symmetric(vertical: 9),
                             ),
                             style: TextStyle(color: Colors.black),
                             textAlignVertical: TextAlignVertical.center,
@@ -74,11 +73,17 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                   height: 20.0,
                   fit: BoxFit.fill,
                 ),
+                const SizedBox(
+                  width: 3.0,
+                ),
                 Image.asset(
                   "assets/images/notif.png",
                   width: 22.0,
                   height: 22.0,
                   fit: BoxFit.fill,
+                ),
+                const SizedBox(
+                  width: 3.0,
                 ),
                 Image.asset(
                   "assets/images/cart.png",
@@ -136,82 +141,90 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                    Container(
-                      height: 120,
-                      width: 197,
-                      decoration: const BoxDecoration(
-                        color: Color.fromARGB(196, 125, 125, 125),
-                        borderRadius: BorderRadius.only(
-                          topLeft:
-                              Radius.circular(20), // Radius untuk kiri atas
-                          bottomLeft:
-                              Radius.circular(20), // Radius untuk kiri bawah
+                    Expanded(
+                      child: Container(
+                        height: 120,
+                        margin: const EdgeInsets.only(right: 0.0),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(196, 125, 125, 125),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment
+                              .center, // Center content horizontally
+                          children: [
+                            Container(
+                              height: 25,
+                              width: 140,
+                              decoration: BoxDecoration(
+                                color: Color.fromARGB(204, 191, 93, 1),
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: Text(
+                                  "New article this week",
+                                  style: TextStyle(
+                                    fontSize: 10.0,
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 8.0,
+                            ),
+                            Text(
+                              "10 Alat BBQ Wajib Ada \nSaat Pesta Tahun Baru",
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                height: 1.2,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            Container(
+                              height: 30,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  padding: EdgeInsets.symmetric(
+                                    vertical: 0,
+                                    horizontal: 12.0,
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  "Lihat Selengkapnya",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Color.fromARGB(204, 191, 93, 1),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 25,
-                            width: 140,
-                            decoration: BoxDecoration(
-                                color: Color.fromARGB(204, 191, 93, 1),
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Padding(
-                              padding: const EdgeInsets.all(3.0),
-                              child: Text(
-                                "New article this week",
-                                style: TextStyle(
-                                  fontSize: 10.0,
-                                  color: Colors.white,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 8.0,
-                          ),
-                          Text(
-                            "10 Alat BBQ Wajib Ada \nSaat Pesta Tahun Baru",
-                            style: TextStyle(
-                              fontSize: 15.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              height: 1.2,
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          Container(
-                            height: 30,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.white,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 0, horizontal: 12.0),
-                              ),
-                              onPressed: () {},
-                              child: Text(
-                                "Lihat Selengkapnya",
-                                style: TextStyle(
-                                  fontSize: 12.0,
-                                  color: Color.fromARGB(204, 191, 93, 1),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
-                    Image.asset(
-                      "assets/images/inspirasi1.png",
-                      width: 197.0,
-                      height: 120.0,
-                      fit: BoxFit.fill,
+                    Expanded(
+                      child: Image.asset(
+                        "assets/images/inspirasi1.png",
+                        height: 120.0,
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ],
                 ),
@@ -298,7 +311,9 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                           gambar: 'assets/images/livingroom.jpg',
                           color: Color.fromARGB(130, 155, 124, 112),
                         ),
-                        Spacer(),
+                        const SizedBox(
+                          width: 10.0,
+                        ),
                         shoptheroom(
                           nama: 'Kitchen',
                           gambar: 'assets/images/kitchen.jpg',
@@ -308,15 +323,17 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left: 8, right: 8),
                     child: Row(
                       children: [
                         shoptheroom(
-                          nama: 'Dinig Room',
+                          nama: 'Dining Room',
                           gambar: 'assets/images/diningroom.jpg',
                           color: Color.fromARGB(255, 201, 217, 226),
                         ),
-                        Spacer(),
+                        const SizedBox(
+                          width: 10.0,
+                        ),
                         shoptheroom(
                           nama: 'Bedroom',
                           gambar: 'assets/images/bedroom.jpg',
@@ -326,7 +343,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
                     child: Row(
                       children: [
                         shoptheroom(
@@ -334,7 +351,9 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                           gambar: 'assets/images/workspace.jpg',
                           color: Color.fromARGB(255, 170, 198, 175),
                         ),
-                        Spacer(),
+                        const SizedBox(
+                          width: 10.0,
+                        ),
                         shoptheroom(
                           nama: 'Bathroom & Laundry',
                           gambar: 'assets/images/bathroom.jpg',
@@ -501,13 +520,6 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      // First Container with Text
-                      // Image.asset(
-                      //   "assets/images/arrowback.png",
-                      //   width: 30.0,
-                      //   height: 30.0,
-                      //   color: Color.fromARGB(255, 120, 120, 120),
-                      // ),
                       const SizedBox(
                         width: 10.0,
                       ),
@@ -657,66 +669,71 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                     borderRadius: BorderRadius.circular(15)),
                 child: Row(
                   children: [
-                    Container(
-                      padding: EdgeInsets.only(left: 2),
-                      height: 160,
-                      width: 190,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment
-                            .start, // Set the alignment to start
-                        crossAxisAlignment: CrossAxisAlignment
-                            .start, // Align children to the start
-                        children: [
-                          Text(
-                            "Cari Inspirasi Rumah, \nKini Lebih Mudah",
-                            style: TextStyle(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.bold,
-                              height: 1.2,
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 5.0,
-                          ),
-                          Text(
-                            "Temukan ide & solusi \nuntuk semua kebutuhan rumahmu disini",
-                            style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.bold,
-                              height: 1.2,
-                            ),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              minimumSize: Size(100, 20),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(0.0),
-                                side: BorderSide(
-                                  color: Colors.grey,
-                                  width: 0,
-                                ),
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.only(left: 2),
+                        height: 160,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Cari Inspirasi Rumah, \nKini Lebih Mudah",
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                                height: 1.2,
                               ),
-                              padding: EdgeInsets.zero,
-                              backgroundColor: Colors.white,
                             ),
-                            onPressed: () {},
-                            child: const Text(
-                              "Lihat Selengkapnya",
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 10),
+                            const SizedBox(
+                              height: 5.0,
                             ),
-                          )
-                        ],
+                            Text(
+                              "Temukan ide & solusi \nuntuk semua kebutuhan \n rumahmu disini",
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.bold,
+                                height: 1.2,
+                              ),
+                            ),
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                minimumSize: Size(110, 2),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(0.0),
+                                  side: BorderSide(
+                                    color: Colors.grey,
+                                    width: 0,
+                                  ),
+                                ),
+                                padding: EdgeInsets.zero,
+                                backgroundColor: Colors.white,
+                              ),
+                              onPressed: () {},
+                              child: const Text(
+                                "Lihat Selengkapnya",
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 11),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(15),
-                      child: Image.asset('assets/images/living.jpg',
-                          fit: BoxFit.cover, height: 160, width: 190),
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: Image.asset(
+                          'assets/images/living.jpg',
+                          fit: BoxFit.cover,
+                          height: 140,
+                          width: double.infinity,
+                        ),
+                      ),
                     )
                   ],
                 ),
-              ),
+              )
             ],
           ),
         ),
