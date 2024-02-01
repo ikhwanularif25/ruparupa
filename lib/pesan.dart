@@ -56,7 +56,8 @@ class _pesanState extends State<pesan> {
               ),
               inbox(
                 awal: 'Serbu DISKON di Year End Sale',
-                keterangan: 'DISKON sd 50% hingga produk GRATIS dengan harga spesial',
+                keterangan:
+                    'DISKON sd 50% hingga produk GRATIS dengan harga spesial',
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -78,7 +79,8 @@ class _pesanState extends State<pesan> {
               ),
               inbox(
                 awal: 'Akhir Tahun Dapat Bonus',
-                keterangan: 'Bonus Cashback sd Rp1,2 juta+ Ekstra Potongan Rp700 ribu',
+                keterangan:
+                    'Bonus Cashback sd Rp1,2 juta+ Ekstra Potongan Rp700 ribu',
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -100,7 +102,8 @@ class _pesanState extends State<pesan> {
               ),
               inbox(
                 awal: 'Tips Aman Hadapi Badai',
-                keterangan: 'Miliki lampu daruta, payung, sd pel lantai otomatis',
+                keterangan:
+                    'Miliki lampu daruta, payung, sd pel lantai otomatis',
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -111,7 +114,8 @@ class _pesanState extends State<pesan> {
               ),
               inbox(
                 awal: 'Serbu DISKON di Year End Sale',
-                keterangan: 'DISKON sd 50% hingga produk GRATIS dengan harga spesial',
+                keterangan:
+                    'DISKON sd 50% hingga produk GRATIS dengan harga spesial',
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -133,7 +137,8 @@ class _pesanState extends State<pesan> {
               ),
               inbox(
                 awal: 'Akhir Tahun Dapat Bonus',
-                keterangan: 'Bonus Cashback sd Rp1,2 juta+ Ekstra Potongan Rp700 ribu',
+                keterangan:
+                    'Bonus Cashback sd Rp1,2 juta+ Ekstra Potongan Rp700 ribu',
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -155,7 +160,8 @@ class _pesanState extends State<pesan> {
               ),
               inbox(
                 awal: 'Tips Aman Hadapi Badai',
-                keterangan: 'Miliki lampu daruta, payung, sd pel lantai otomatis',
+                keterangan:
+                    'Miliki lampu daruta, payung, sd pel lantai otomatis',
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -185,7 +191,8 @@ class _pesanState extends State<pesan> {
                         ),
                         Spacer(), // Jarak antara teks dan tombol
                         ElevatedButton(
-                          onPressed: () {  // Navigasi ke halaman berikutnya
+                          onPressed: () {
+                            // Navigasi ke halaman berikutnya
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -223,4 +230,3 @@ class _pesanState extends State<pesan> {
     );
   }
 }
-
