@@ -10,7 +10,6 @@ import 'package:ruparupa/widgets/beranda/banner_iklan.dart';
 import 'package:ruparupa/widgets/beranda/column_beranda.dart';
 import 'package:ruparupa/widgets/beranda/tombol_offers.dart';
 
-
 class berandascreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
