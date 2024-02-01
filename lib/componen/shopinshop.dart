@@ -85,8 +85,10 @@ class shopinshop extends StatelessWidget {
             child: Image.asset(
               gambar.toString(),
               fit: BoxFit.cover,
+
               height: double
                   .infinity, // Set the height to match the container height
+
               width: 230, // Set the width to maintain the aspect ratio
             ),
           )
