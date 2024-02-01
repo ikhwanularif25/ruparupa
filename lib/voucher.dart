@@ -1,7 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables, prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:ruparupa/componen/voucher.dart';
+import 'package:ruparupa/componen/voucher2.dart';
 
 class Voucher extends StatefulWidget {
   const Voucher({Key? key}) : super(key: key);
@@ -97,36 +97,36 @@ class _VoucherState extends State<Voucher> {
               Divider(
                 color: Color.fromARGB(255, 209, 90, 10),
               ),
-              voucher(
+              voucher2(
                 ket1: "ACE Gratis Ongkir Rp 25.000",
                 ket2:
                     "Gratis Ongkir Seluruh Indonesia Rp25.000 dengan\nmin belanja Rp 300.000 untuk semua produk ACE",
                 ket3: "21 Jam",
               ),
-              voucher(
+              voucher2(
                 ket1: "Voucher payday Ataru",
                 ket2:
                     "Potongan Rp20.000 minimal belanja Rp300.000 \nkhusus belanja produk Ataru",
                 ket3: "22 Jam",
               ),
-              voucher(
+              voucher2(
                 ket1: "Voucher Diskon Payday MEGA",
                 ket2:
                     "Diskon Rp225.000 min. belanja Rp2.000.000 \ndengan kartu kredit MEGA khusus full payment",
                 ket3: "22 Jam",
               ),
-              voucher(
+              voucher2(
                 ket1: "Voucher Diskon Payday UOB",
                 ket2:
                     "Potongan Rp150.000 dengan min. belanja \n1.500.000 menggunakan kartu kredit UOB",
                 ket3: "22 Jam",
               ),
-              voucher(
+              voucher2(
                 ket1: "Voucher Registrasi",
                 ket2: "Potongan Rp25.000, min belanja Rp300.000",
                 ket3: "31 Maret 2024",
               ),
-              voucher(
+              voucher2(
                 ket1: "Voucher Registrasi",
                 ket2: "Potongan ongkos kirim Rp25.000, min belanja Rp200.000",
                 ket3: "31 Maret 2024",

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:ruparupa/promo.dart';
 
-class voucher extends StatelessWidget {
-  const voucher({
+class voucher2 extends StatelessWidget {
+  const voucher2({
     super.key,
     this.produk,
     this.rincian,
