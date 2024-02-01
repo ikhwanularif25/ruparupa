@@ -1,7 +1,11 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:ruparupa/alamat.dart';
 import 'package:ruparupa/componen/akunatas.dart';
+import 'package:ruparupa/componen/refer.dart';
+import 'package:ruparupa/profil.dart';
+import 'package:ruparupa/voucher.dart';
 import 'package:ruparupa/profil.dart';
 
 class akunscreen extends StatefulWidget {
@@ -332,8 +336,8 @@ class _akunscreenState extends State<akunscreen> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Aksi ketika tombol ditekan
-                  // Misalnya, tampilkan dialog atau lakukan sesuatu yang relevan
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Alamat()));
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white, // Warna latar belakang tombol (putih)
@@ -378,8 +382,8 @@ class _akunscreenState extends State<akunscreen> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Aksi ketika tombol ditekan
-                  // Misalnya, tampilkan dialog atau lakukan sesuatu yang relevan
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Refer()));
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white, // Warna latar belakang tombol (putih)
@@ -424,11 +428,19 @@ class _akunscreenState extends State<akunscreen> {
                           const SizedBox(
                             height: 10.0,
                           ),
-                          Image.asset(
-                            "assets/images/voucher.png",
-                            width: 40.0,
-                            height: 40.0,
-                            fit: BoxFit.fill,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Voucher()));
+                            },
+                            child: Image.asset(
+                              "assets/images/voucher.png",
+                              width: 45.0,
+                              height: 38.0,
+                              fit: BoxFit.fill,
+                            ),
                           ),
                           const SizedBox(
                             height: 2.0,
@@ -436,7 +448,7 @@ class _akunscreenState extends State<akunscreen> {
                           Text(
                             "Voucher Saya",
                             style: TextStyle(
-                                fontSize: 9.5,
+                                fontSize: 9,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -512,6 +524,7 @@ class _akunscreenState extends State<akunscreen> {
                           const Icon(
                             Icons.star_border_outlined,
                             size: 35.0,
+                            color: Color.fromARGB(255, 77, 77, 77),
                           ),
                           const SizedBox(
                             height: 2.0,
@@ -519,7 +532,7 @@ class _akunscreenState extends State<akunscreen> {
                           Text(
                             "Ulasan & Nilai",
                             style: TextStyle(
-                              fontSize: 9.5,
+                              fontSize: 9,
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
                             ),
