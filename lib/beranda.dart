@@ -201,7 +201,7 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   children: [
                     ClipRect(
                       child: Image.asset(
-                        'assets/img9.jpg',
+                        'assets/img8.jpg',
                       ),
                     ),
                     Container(

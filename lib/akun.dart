@@ -6,7 +6,6 @@ import 'package:ruparupa/componen/akunatas.dart';
 import 'package:ruparupa/componen/refer.dart';
 import 'package:ruparupa/profil.dart';
 import 'package:ruparupa/voucher.dart';
-import 'package:ruparupa/profil.dart';
 
 class akunscreen extends StatefulWidget {
   const akunscreen({Key? key}) : super(key: key);
