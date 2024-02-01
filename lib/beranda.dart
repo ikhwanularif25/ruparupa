@@ -259,9 +259,15 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
         ),
       ),
       floatingActionButton: SizedBox(
-        width: 100.0,
+        width: 110.0,
         height: 40.0,
         child: FloatingActionButton(
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+                20.0), // Ubah nilai untuk membuat sudut lebih bulat
+          ),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -270,13 +276,14 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   AssetImage(
                     "assets/icons/chat-bubble-typing-oval.png",
                   ),
-                  size: 24.0,
+                  size: 18.0,
                 ),
                 Spacer(),
                 Text(
-                  "Message",
+                  "Rupa Cere",
                   style: TextStyle(
-                    fontSize: 12.0,
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
