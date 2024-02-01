@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ruparupa/promo.dart';
 
 class rincianpembayaran extends StatelessWidget {
   const rincianpembayaran({
@@ -127,46 +128,55 @@ class rincianpembayaran extends StatelessWidget {
             const SizedBox(
               height: 10.0,
             ),
-            Container(
-              height: 50,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 1.0,
-                  color: Colors.grey[900]!,
+            InkWell(
+              onTap: (){
+                Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => promo()),
+                          );
+              },
+              child: Container(
+                height: 50,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 1.0,
+                    color: Colors.grey[900]!,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(8.0),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(8.0),
-                ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    ImageIcon(
-                      AssetImage(
-                        "assets/icons/discount-percent-badge.png",
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      ImageIcon(
+                        AssetImage(
+                          "assets/icons/discount-percent-badge.png",
+                        ),
+                        size: 20.0,
+                        color: Colors.orange,
                       ),
-                      size: 20.0,
-                      color: Colors.orange,
-                    ),
-                    const SizedBox(
-                      width: 5.0,
-                    ),
-                    Text(
-                      "Pakai promo untuk lebih hemat",
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        color: Colors.grey[600],
+                      const SizedBox(
+                        width: 5.0,
                       ),
-                    ),
-                    Spacer(),
-                    const Icon(
-                      Icons.arrow_forward_ios,
-                      size: 14.0,
-                      color: Colors.grey,
-                    ),
-                  ],
+                      Text(
+                        "Pakai promo untuk lebih hemat",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.grey[600],
+                        ),
+                      ),
+                      Spacer(),
+                      const Icon(
+                        Icons.arrow_forward_ios,
+                        size: 14.0,
+                        color: Colors.grey,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
