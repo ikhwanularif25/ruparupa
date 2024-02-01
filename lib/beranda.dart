@@ -1,10 +1,8 @@
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ruparupa/keranjang.dart';
-import 'package:ruparupa/widgets/beranda/banner_iklan.dart';
-import 'package:ruparupa/widgets/beranda/column_beranda.dart';
-import 'package:ruparupa/widgets/beranda/tombol_offers.dart';
-import 'package:ruparupa/pencarian.dart';
 
 class berandascreen extends StatefulWidget {
   @override
@@ -117,20 +115,131 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      CustomIconColumn(iconData: Icons.person, text: "Hello"),
-                      SizedBox(width: 15.0),
-                      CustomIconColumn(iconData: Icons.home, text: "Rumah"),
-                      SizedBox(width: 15.0),
-                      CustomIconColumn(iconData: Icons.phone, text: "Telpon"),
-                      SizedBox(width: 15.0),
-                      CustomIconColumn(
-                          iconData: Icons.beach_access, text: "Pantai"),
-                      SizedBox(width: 15.0),
-                      CustomIconColumn(
-                          iconData: Icons.science_sharp, text: "Kimia"),
-                      SizedBox(width: 15.0),
-                      CustomIconColumn(
-                          iconData: Icons.bookmark, text: "Favorit"),
+                      Column(
+                        children: [
+                          Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color: Colors.grey, // Warna border
+                                width: 0.5,
+                              ),
+                            ),
+                            child: Icon(Icons.content_cut),
+                          ),
+                          const SizedBox(
+                            height: 10.0,
+                          ),
+                          Text("Gunting")
+                        ],
+                      ),
+                      SizedBox(width: 25.0),
+                      Column(
+                        children: [
+                          Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color: Colors.grey, // Warna border
+                                width: 0.5,
+                              ),
+                            ),
+                            child: Icon(Icons.home),
+                          ),
+                          const SizedBox(
+                            height: 10.0,
+                          ),
+                          Text("Rumah Tangga")
+                        ],
+                      ),
+                      SizedBox(width: 25.0),
+                      Column(
+                        children: [
+                          Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color: Colors.grey, // Warna border
+                                width: 0.5,
+                              ),
+                            ),
+                            child: Icon(Icons.phone),
+                          ),
+                          const SizedBox(
+                            height: 10.0,
+                          ),
+                          Text("Telepon Rumah")
+                        ],
+                      ),
+                      SizedBox(width: 25.0),
+                      Column(
+                        children: [
+                          Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color: Colors.grey, // Warna border
+                                width: 0.5,
+                              ),
+                            ),
+                            child: Icon(Icons.content_cut),
+                          ),
+                          const SizedBox(
+                            height: 10.0,
+                          ),
+                          Text("Gunting")
+                        ],
+                      ),
+                      SizedBox(width: 25.0),
+                      Column(
+                        children: [
+                          Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color: Colors.grey, // Warna border
+                                width: 0.5,
+                              ),
+                            ),
+                            child: Icon(Icons.home),
+                          ),
+                          const SizedBox(
+                            height: 10.0,
+                          ),
+                          Text("Rumah Tangga")
+                        ],
+                      ),
+                      SizedBox(width: 25.0),
+                      Column(
+                        children: [
+                          Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              border: Border.all(
+                                color: Colors.grey, // Warna border
+                                width: 0.5,
+                              ),
+                            ),
+                            child: Icon(Icons.phone),
+                          ),
+                          const SizedBox(
+                            height: 10.0,
+                          ),
+                          Text("Telepon Rumah")
+                        ],
+                      ),
                     ],
                   ),
                 ),
@@ -139,9 +248,25 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      BannerIklan(img: "assets/img7.jpg"),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          "assets/img7.jpg",
+                          width: 300.0,
+                          height: 120.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                       SizedBox(width: 25.0),
-                      BannerIklan(img: "assets/img8.jpg"),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          "assets/img8.jpg",
+                          width: 300.0,
+                          height: 120.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -167,25 +292,41 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      TombolOffers(
-                          colorBg: Colors.orange,
-                          colorText: Colors.white,
-                          text: "Weekend Deals"),
+                      ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.orange,
+                          ),
+                          child: Text(
+                            "Weekend Deals",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          )),
                       SizedBox(width: 7.0),
-                      TombolOffers(
-                          colorBg: Colors.white,
-                          colorText: Colors.orange,
-                          text: "Gopay Payday"),
+                      ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                          ),
+                          child: Text(
+                            "Gopay Payday",
+                            style: TextStyle(
+                              color: Colors.orange,
+                            ),
+                          )),
                       SizedBox(width: 7.0),
-                      TombolOffers(
-                          colorBg: Colors.white,
-                          colorText: Colors.orange,
-                          text: "Special Online"),
-                      SizedBox(width: 7.0),
-                      TombolOffers(
-                          colorBg: Colors.white,
-                          colorText: Colors.orange,
-                          text: "Penawaran Lainnya"),
+                      ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                          ),
+                          child: Text(
+                            "Spesial Online",
+                            style: TextStyle(
+                              color: Colors.orange,
+                            ),
+                          ))
                     ],
                   ),
                 )
@@ -204,14 +345,7 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     filled: true,
-                    prefixIcon: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => pencarian()));
-                        },
-                        child: Icon(Icons.search)),
+                    prefixIcon: Icon(Icons.search),
                     hintText: 'Cari Barang Apa?',
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
