@@ -283,7 +283,7 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                 Text(
                   "Rupa Cere",
                   style: TextStyle(
-                    fontSize: 14.0,
+                    fontSize: 16.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
