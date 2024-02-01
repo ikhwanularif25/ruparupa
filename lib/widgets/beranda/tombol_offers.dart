@@ -20,7 +20,7 @@ class TombolOffers extends StatelessWidget {
         backgroundColor: MaterialStateProperty.all<Color>(colorBg),
         shape: MaterialStateProperty.all<OutlinedBorder>(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.zero,
+            borderRadius: BorderRadius.circular(8.0),
           ),
         ),
       ),
