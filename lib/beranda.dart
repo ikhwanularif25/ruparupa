@@ -1,7 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ruparupa/keranjang.dart';
-import 'package:ruparupa/widgets/column_beranda.dart';
+import 'package:ruparupa/widgets/beranda/banner_iklan.dart';
+import 'package:ruparupa/widgets/beranda/column_beranda.dart';
+import 'package:ruparupa/widgets/beranda/tombol_offers.dart';
+import 'package:ruparupa/pencarian.dart';
 
 class berandascreen extends StatefulWidget {
   @override
@@ -59,7 +62,6 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   ),
                 ),
                 Container(
-                  height: 45,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
@@ -80,10 +82,10 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                           return GestureDetector(
                             onTap: () => _controller.animateToPage(entry.key),
                             child: Container(
-                              width: 7.0,
-                              height: 7.0,
+                              width: 9.0,
+                              height: 9.0,
                               margin: EdgeInsets.symmetric(
-                                  vertical: 5.0, horizontal: 2.0),
+                                  vertical: 8.0, horizontal: 4.0),
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: (Theme.of(context).brightness ==
@@ -115,22 +117,20 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      CustomIconColumn(iconData: Icons.face, text: "Orang"),
-                      SizedBox(width: 12.0),
+                      CustomIconColumn(iconData: Icons.person, text: "Hello"),
+                      SizedBox(width: 15.0),
+                      CustomIconColumn(iconData: Icons.home, text: "Rumah"),
+                      SizedBox(width: 15.0),
+                      CustomIconColumn(iconData: Icons.phone, text: "Telpon"),
+                      SizedBox(width: 15.0),
                       CustomIconColumn(
-                          iconData: Icons.home, text: "Rumah Tangga"),
-                      SizedBox(width: 12.0),
+                          iconData: Icons.beach_access, text: "Pantai"),
+                      SizedBox(width: 15.0),
                       CustomIconColumn(
-                          iconData: Icons.phone, text: "Telpon Rumah"),
-                      SizedBox(width: 12.0),
+                          iconData: Icons.science_sharp, text: "Kimia"),
+                      SizedBox(width: 15.0),
                       CustomIconColumn(
-                          iconData: Icons.content_cut, text: "Gunting"),
-                      SizedBox(width: 12.0),
-                      CustomIconColumn(iconData: Icons.face, text: "Orang"),
-                      SizedBox(width: 12.0),
-                      CustomIconColumn(
-                          iconData: Icons.home, text: "Rumah Tangga"),
-                      SizedBox(width: 12.0),
+                          iconData: Icons.bookmark, text: "Favorit"),
                     ],
                   ),
                 ),
@@ -139,25 +139,9 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          "assets/img7.jpg",
-                          width: 300.0,
-                          height: 120.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                      BannerIklan(img: "assets/img7.jpg"),
                       SizedBox(width: 25.0),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          "assets/img8.jpg",
-                          width: 300.0,
-                          height: 120.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                      BannerIklan(img: "assets/img8.jpg"),
                     ],
                   ),
                 ),
@@ -183,41 +167,25 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.orange,
-                          ),
-                          child: Text(
-                            "Weekend Deals",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          )),
+                      TombolOffers(
+                          colorBg: Colors.orange,
+                          colorText: Colors.white,
+                          text: "Weekend Deals"),
                       SizedBox(width: 7.0),
-                      ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                          ),
-                          child: Text(
-                            "Gopay Payday",
-                            style: TextStyle(
-                              color: Colors.orange,
-                            ),
-                          )),
+                      TombolOffers(
+                          colorBg: Colors.white,
+                          colorText: Colors.orange,
+                          text: "Gopay Payday"),
                       SizedBox(width: 7.0),
-                      ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                          ),
-                          child: Text(
-                            "Spesial Online",
-                            style: TextStyle(
-                              color: Colors.orange,
-                            ),
-                          ))
+                      TombolOffers(
+                          colorBg: Colors.white,
+                          colorText: Colors.orange,
+                          text: "Special Online"),
+                      SizedBox(width: 7.0),
+                      TombolOffers(
+                          colorBg: Colors.white,
+                          colorText: Colors.orange,
+                          text: "Penawaran Lainnya"),
                     ],
                   ),
                 )
@@ -236,7 +204,14 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     filled: true,
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => pencarian()));
+                        },
+                        child: Icon(Icons.search)),
                     hintText: 'Cari Barang Apa?',
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
