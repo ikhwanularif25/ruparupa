@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:ruparupa/keranjang.dart';
 import 'package:ruparupa/pencarian.dart';
+import 'package:ruparupa/pesan.dart';
 import 'package:ruparupa/widgets/beranda/banner_iklan.dart';
 import 'package:ruparupa/widgets/beranda/column_beranda.dart';
 import 'package:ruparupa/widgets/beranda/tombol_offers.dart';
@@ -258,7 +259,7 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
         ),
       ),
       floatingActionButton: SizedBox(
-        width: 150.0,
+        width: 100.0,
         height: 40.0,
         child: FloatingActionButton(
           child: Padding(
@@ -282,7 +283,10 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
             ),
           ),
           onPressed: () {
-            //
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => pesan()),
+            );
           },
         ),
       ),
