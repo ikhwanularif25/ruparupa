@@ -7,7 +7,6 @@ import 'package:ruparupa/componen/shopinshop.dart';
 import 'package:ruparupa/componen/shopthelook.dart';
 import 'package:ruparupa/componen/shopthelook2.dart';
 import 'package:ruparupa/componen/tips.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class inspirasiscreen extends StatefulWidget {
   const inspirasiscreen({Key? key}) : super(key: key);
@@ -23,7 +22,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
       appBar: AppBar(
         actions: [
           Padding(
-            padding: const EdgeInsets.only(left: 4, right: 22),
+            padding: const EdgeInsets.only(left: 8, right: 22),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -38,7 +37,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                      color: Colors.transparent, // Border color
+                      color: Colors.grey, // Border color
                     ),
                   ),
                   child: Padding(
@@ -111,20 +110,19 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                     begin: Alignment.topCenter,
                     end: Alignment.center,
                     colors: [
-                      Color.fromRGBO(255, 255, 255, 1), // Warna atas (coklat)
+                      Color.fromRGBO(226, 186, 152, 1), // Warna atas (coklat)
                       Color.fromARGB(255, 255, 255, 255), // Warna bawah (putih)
                     ],
                   ),
                 ),
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 10),
+                    padding: const EdgeInsets.all(12.0),
                     child: Text(
                       "Ide & Inspirasi",
-                      style: GoogleFonts.agdasima(
-                        textStyle: TextStyle(
-                          fontSize: 47.0,
-                        ),
+                      style: TextStyle(
+                        fontSize: 47.0,
+                        fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -258,14 +256,14 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                         width: 10), // Add spacing between widgets if needed
                     Expanded(
                       child: ide1(
-                        gambar: 'assets/images/spatula2.png',
+                        gambar: 'assets/images/spatula.png',
                         nama: 'Celcio & Co Set Peralatan \nBbq 3 Pcs - Hitam',
                         hargadiskon: '249.100',
                         diskon: '10%',
                         harga: 'Rp224.100',
                         icon: "assets/images/star.png",
                         ket: "5 | 1 Ulasan",
-                        icon2: 'assets/images/car2.png',
+                        icon2: 'assets/images/car.png',
                         ket2: 'Sameday & Instant',
                         ketColor2: const Color.fromARGB(255, 101, 101, 101),
                         discolor: const Color.fromARGB(255, 159, 42, 33),
@@ -284,7 +282,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                     height: 5,
                     width: 90,
                     decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 255, 255, 255),
+                      color: Color.fromARGB(130, 121, 85, 72),
                     ),
                   ),
                   const SizedBox(
@@ -305,7 +303,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                     height: 5,
                     width: 90,
                     decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 255, 255, 255),
+                      color: Color.fromARGB(130, 121, 85, 72),
                     ),
                   ),
                 ],
@@ -383,7 +381,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       height: 5,
                       width: 100,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 250, 250, 250),
+                        color: Color.fromARGB(130, 121, 85, 72),
                       ),
                     ),
                     const SizedBox(
@@ -404,7 +402,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       height: 5,
                       width: 100,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255),
+                        color: Color.fromARGB(130, 121, 85, 72),
                       ),
                     ),
                   ],
@@ -424,7 +422,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 judul: "Storage \nSolutions",
                 ket:
                     "Temukan solusi \npenyimpanan untuk \nsemua ruangan agar \nrumah tetap rapi \nsetiap saat",
-                gambar: 'assets/images/shopin.jpg',
+                gambar: 'assets/images/homestorage.jpg',
                 color: Color.fromARGB(221, 217, 228, 234),
               ),
               const SizedBox(
@@ -439,7 +437,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       height: 5,
                       width: 100,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(130, 255, 255, 255),
+                        color: Color.fromARGB(130, 121, 85, 72),
                       ),
                     ),
                     const SizedBox(
@@ -460,7 +458,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       height: 5,
                       width: 100,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255),
+                        color: Color.fromARGB(130, 121, 85, 72),
                       ),
                     ),
                   ],
@@ -587,7 +585,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       height: 5,
                       width: 55,
                       decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255),
+                        color: Color.fromARGB(130, 121, 85, 72),
                       ),
                     ),
                     const SizedBox(
