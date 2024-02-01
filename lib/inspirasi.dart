@@ -22,7 +22,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
       appBar: AppBar(
         actions: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 8, right: 22),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -33,7 +33,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 5),
                   height: 33,
-                  width: 270,
+                  width: 240,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
@@ -66,6 +66,9 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                       ],
                     ),
                   ),
+                ),
+                const SizedBox(
+                  width: 10.0,
                 ),
                 Image.asset(
                   "assets/images/like.png",
@@ -233,33 +236,38 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 padding: const EdgeInsets.all(15.0),
                 child: Row(
                   children: [
-                    ide1(
-                      gambar: 'assets/images/inp1.png',
-                      nama: 'Celcio & Co Pemanggang \nArang Bbq Square',
-                      hargadiskon: '',
-                      diskon: '',
-                      harga: 'Rp1.499.000',
-                      icon: "assets/images/info.png",
-                      ket: "Voucher Diskon",
-                      ketColor1: Colors.red,
-                      ketColor2: Colors.red,
-                      discolor: Colors.white,
-                      icon2: 'assets/images/white.png',
-                      ket2: '',
+                    Expanded(
+                      child: ide1(
+                        gambar: 'assets/images/inp1.png',
+                        nama: 'Celcio & Co Pemanggang \nArang Bbq Square',
+                        hargadiskon: '',
+                        diskon: '',
+                        harga: 'Rp1.499.000',
+                        icon: "assets/images/info.png",
+                        ket: "Voucher Diskon",
+                        ketColor1: Colors.red,
+                        ketColor2: Colors.red,
+                        discolor: Colors.white,
+                        icon2: 'assets/images/white.png',
+                        ket2: '',
+                      ),
                     ),
-                    Spacer(),
-                    ide1(
-                      gambar: 'assets/images/spatula.png',
-                      nama: 'Celcio & Co Set Peralatan \nBbq 3 Pcs - Hitam',
-                      hargadiskon: '249.100',
-                      diskon: '10%',
-                      harga: 'Rp224.100',
-                      icon: "assets/images/star.png",
-                      ket: "5 | 1 Ulasan",
-                      icon2: 'assets/images/car.png',
-                      ket2: 'Sameday & Instant',
-                      ketColor2: const Color.fromARGB(255, 101, 101, 101),
-                      discolor: const Color.fromARGB(255, 159, 42, 33),
+                    const SizedBox(
+                        width: 10), // Add spacing between widgets if needed
+                    Expanded(
+                      child: ide1(
+                        gambar: 'assets/images/spatula.png',
+                        nama: 'Celcio & Co Set Peralatan \nBbq 3 Pcs - Hitam',
+                        hargadiskon: '249.100',
+                        diskon: '10%',
+                        harga: 'Rp224.100',
+                        icon: "assets/images/star.png",
+                        ket: "5 | 1 Ulasan",
+                        icon2: 'assets/images/car.png',
+                        ket2: 'Sameday & Instant',
+                        ketColor2: const Color.fromARGB(255, 101, 101, 101),
+                        discolor: const Color.fromARGB(255, 159, 42, 33),
+                      ),
                     ),
                   ],
                 ),
