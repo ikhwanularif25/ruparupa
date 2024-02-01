@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import 'keranjang.dart';
-import 'pembayaran.dart';
+
 import 'pencarian.dart';
 import 'widgets/detail_produk/produkdetail.dart';
 
@@ -25,14 +25,14 @@ class _CarouselWithIndicatorState extends State<detailproduk> {
       ),
     ),
     Container(
-      child: Image.asset(
-        "assets/img5.jpg",
+      child: Image.network(
+        "https://images.unsplash.com/photo-1632935187086-49a9d8027292?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZ1cm5pdHVyZXN8ZW58MHx8MHx8fDA%3D",
         fit: BoxFit.contain,
       ),
     ),
     Container(
-      child: Image.asset(
-        "assets/img6.jpg",
+      child: Image.network(
+        "https://images.unsplash.com/photo-1554295405-abb8fd54f153?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZ1cm5pdHVyZXN8ZW58MHx8MHx8fDA%3D",
         fit: BoxFit.contain,
       ),
     ),
@@ -40,6 +40,7 @@ class _CarouselWithIndicatorState extends State<detailproduk> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         actions: [
           Row(
@@ -110,85 +111,310 @@ class _CarouselWithIndicatorState extends State<detailproduk> {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: MediaQuery.of(context).size.width * 1.2,
-              child: Stack(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Column(
                 children: [
-                  Positioned.fill(
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          CarouselSlider(
-                            items: imgUrls,
-                            carouselController: _controller,
-                            options: CarouselOptions(
-                              autoPlay: true,
-                              viewportFraction: 1,
-                              aspectRatio: 5 / 7,
-                              onPageChanged: (index, reason) {
-                                Future.delayed(Duration.zero, () {
-                                  setState(() {
-                                    _current = index;
-                                  });
-                                });
-                              },
+                  Container(
+                    height: MediaQuery.of(context).size.width * 1.2,
+                    child: Stack(
+                      children: [
+                        Positioned.fill(
+                          child: Column(
+                            children: [
+                              CarouselSlider(
+                                items: imgUrls,
+                                carouselController: _controller,
+                                options: CarouselOptions(
+                                  autoPlay: true,
+                                  viewportFraction: 1,
+                                  aspectRatio: 5 / 6,
+                                  onPageChanged: (index, reason) {
+                                    Future.delayed(Duration.zero, () {
+                                      setState(() {
+                                        _current = index;
+                                      });
+                                    });
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              padding: EdgeInsetsDirectional.symmetric(
+                                vertical:
+                                    MediaQuery.of(context).size.width * 0.012,
+                              ),
+                              width: MediaQuery.of(context).size.width * 0.15,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                borderRadius: BorderRadius.circular(8.0),
+                                border: Border.all(
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "${_current + 1} ",
+                                    style: TextStyle(
+                                      fontSize:
+                                          MediaQuery.of(context).size.width *
+                                              0.04,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    "/ ${imgUrls.length}",
+                                    style: TextStyle(
+                                      fontSize:
+                                          MediaQuery.of(context).size.width *
+                                              0.04,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        padding: EdgeInsetsDirectional.symmetric(
-                          vertical: MediaQuery.of(context).size.width * 0.012,
+                  produkdetail(),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 5.0,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: MediaQuery.of(context).size.height * 0.01,
+                      ),
+                      child: Text(
+                        "Produk ini tersedia di toko",
+                        style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.height * 0.015,
                         ),
-                        width: MediaQuery.of(context).size.width * 0.15,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(8.0),
-                          border: Border.all(
-                            color: Colors.grey,
+                      ),
+                    ),
+                    Image.asset(
+                      "assets/img2.jpg",
+                      width: MediaQuery.of(context).size.width * 0.2,
+                      height: MediaQuery.of(context).size.height * 0.1,
+                      fit: BoxFit.cover,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: MediaQuery.of(context).size.height * 0.01,
+                      ),
+                      child: RichText(
+                        text: TextSpan(
+                          text: ' ',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "${_current + 1} ",
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: 'Paylater & Cicilan 0% ',
                               style: TextStyle(
                                 fontSize:
-                                    MediaQuery.of(context).size.width * 0.04,
-                                color: Colors.white,
+                                    MediaQuery.of(context).size.height * 0.017,
+                                color: Colors.black,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text(
-                              "/ ${imgUrls.length}",
+                            TextSpan(
+                              text: 'mulai dari Rp33.852/bulan',
                               style: TextStyle(
                                 fontSize:
-                                    MediaQuery.of(context).size.width * 0.04,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                                    MediaQuery.of(context).size.height * 0.015,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w300,
                               ),
                             ),
                           ],
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            produkdetail(),
+            const SizedBox(
+              height: 5.0,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.store,
+                          size: 30.0,
+                          color: Colors.grey,
+                        ),
+                        const SizedBox(
+                          width: 5.0,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Cek Ketersediaan di Toko",
+                              style: TextStyle(
+                                fontSize: 14.0,
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "Produk dapat diambil atau dikirim dari",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                                Text(
+                                  " 49 Toko",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10.0,
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.place,
+                          size: 30.0,
+                          color: Colors.grey,
+                        ),
+                        const SizedBox(
+                          width: 5.0,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Lokasi Pengiriman",
+                              style: TextStyle(
+                                fontSize: 14.0,
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "cek pilihan pengiriman ke ",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                                Text(
+                                  "alamatmu ",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // Container(
+            //   width: MediaQuery.of(context).size.width,
+            //   decoration: const BoxDecoration(
+            //     color: Colors.white,
+            //   ),
+            //   child: DefaultTabController(
+            //     length: 2,
+            //     child: Column(
+            //       children: [
+            //         PreferredSize(
+            //           preferredSize: Size.fromHeight(50),
+            //           child: TabBar(
+            //             controller: _tabController,
+            //             tabs: [
+            //               Tab(
+            //                 text: 'Tab 1',
+            //               ),
+            //               Tab(
+            //                 text: 'Tab 2',
+            //               ),
+            //             ],
+            //           ),
+            //         ),
+            //         Expanded(
+            //           child: TabBarView(
+            //             controller: _tabController,
+            //             children: [
+            //               Container(
+            //                 height: 100,
+            //                 width: 100,
+            //                 decoration: const BoxDecoration(
+            //                   color: Colors.blue,
+            //                 ),
+            //               ),
+            //               Container(
+            //                 height: 100,
+            //                 width: 100,
+            //                 decoration: const BoxDecoration(
+            //                   color: Colors.blue,
+            //                 ),
+            //               ),
+            //             ],
+            //           ),
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
@@ -220,16 +446,17 @@ class _CarouselWithIndicatorState extends State<detailproduk> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => pembayaran()),
+                      MaterialPageRoute(builder: (context) => keranjang()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    minimumSize: Size(
-                        150.0, 35), // Set minimum button size, adjust as needed
+                    minimumSize: Size.fromWidth(
+                      MediaQuery.of(context).size.width * 0.7,
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
-                    primary: Colors.orange, // Warna tombol
+                    backgroundColor: Colors.orange, // Warna tombol
                   ),
                   child: Text(
                     'Tambah Ke Keranjang',
