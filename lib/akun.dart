@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ruparupa/componen/akunatas.dart';
+import 'package:ruparupa/profil.dart';
 
 class akunscreen extends StatefulWidget {
   const akunscreen({Key? key}) : super(key: key);
@@ -265,7 +266,10 @@ class _akunscreenState extends State<akunscreen> {
                       ],
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Profil()));
+                      },
                       style: ElevatedButton.styleFrom(
                         primary:
                             Colors.white, // Warna latar belakang tombol (putih)
