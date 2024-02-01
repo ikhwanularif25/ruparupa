@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:ruparupa/promo.dart';
 
 class voucher extends StatelessWidget {
