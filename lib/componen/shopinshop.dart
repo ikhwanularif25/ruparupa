@@ -48,14 +48,14 @@ class shopinshop extends StatelessWidget {
                   Text(
                     ket.toString(),
                     style: TextStyle(
-                      fontSize: 10,
+                      fontSize: 11,
                       fontWeight: FontWeight.bold,
                       height: 1.2,
                     ),
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      minimumSize: Size(110, 20),
+                      minimumSize: Size(110, 25),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(0.0),
                         side: BorderSide(
@@ -71,7 +71,7 @@ class shopinshop extends StatelessWidget {
                       "Lihat Selengkapnya",
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 10,
+                        fontSize: 11,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -80,16 +80,16 @@ class shopinshop extends StatelessWidget {
               ),
             ),
           ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.asset(
-              gambar.toString(),
-              fit: BoxFit.cover,
-
-              height: double
-                  .infinity, // Set the height to match the container height
-
-              width: 230, // Set the width to maintain the aspect ratio
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                gambar.toString(),
+                fit: BoxFit.cover,
+                height: double.infinity,
+                width: 225,
+              ),
             ),
           )
         ],
