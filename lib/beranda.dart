@@ -257,6 +257,35 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
           ],
         ),
       ),
+      floatingActionButton: SizedBox(
+        width: 150.0,
+        height: 40.0,
+        child: FloatingActionButton(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                const ImageIcon(
+                  AssetImage(
+                    "assets/icons/chat-bubble-typing-oval.png",
+                  ),
+                  size: 24.0,
+                ),
+                Spacer(),
+                Text(
+                  "Message",
+                  style: TextStyle(
+                    fontSize: 12.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          onPressed: () {
+            //
+          },
+        ),
+      ),
     );
   }
 }
