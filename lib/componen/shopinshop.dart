@@ -1,13 +1,51 @@
 import 'package:flutter/material.dart';
 
+class ExampleScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Your App Title'),
+      ),
+      body: Column(
+        children: [
+          // Other widgets above shopinshop
+
+          Expanded(
+            child: shopinshop(
+              judul: 'Your Title 1',
+              ket: 'Your Description 1',
+              gambar: 'assets/images/your_image_1.png',
+              color: Colors.blue, // Set your desired color
+            ),
+          ),
+
+          // Add spacing or other widgets between shopinshop widgets if needed
+
+          Expanded(
+            child: shopinshop(
+              judul: 'Your Title 2',
+              ket: 'Your Description 2',
+              gambar: 'assets/images/your_image_2.png',
+              color: Colors.green, // Set your desired color
+            ),
+          ),
+
+          // Other widgets below shopinshop
+        ],
+      ),
+    );
+  }
+}
+
 class shopinshop extends StatelessWidget {
   const shopinshop({
-    super.key,
+    Key? key,
     this.judul,
     this.ket,
     this.gambar,
     this.color,
-  });
+  }) : super(key: key);
 
   final String? judul;
   final String? ket;
@@ -20,8 +58,10 @@ class shopinshop extends StatelessWidget {
       padding: EdgeInsets.all(5),
       height: 200,
       width: 400,
-      decoration:
-          BoxDecoration(color: color, borderRadius: BorderRadius.circular(15)),
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(15),
+      ),
       child: Row(
         children: [
           Container(
@@ -29,10 +69,8 @@ class shopinshop extends StatelessWidget {
             height: 180,
             width: 145,
             child: Column(
-              mainAxisAlignment:
-                  MainAxisAlignment.start, // Set the alignment to start
-              crossAxisAlignment:
-                  CrossAxisAlignment.start, // Align children to the start
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   judul.toString(),
@@ -82,8 +120,12 @@ class shopinshop extends StatelessWidget {
           Spacer(),
           ClipRRect(
             borderRadius: BorderRadius.circular(15),
-            child: Image.asset(gambar.toString(),
-                fit: BoxFit.cover, height: 180, width: 235),
+            child: Image.asset(
+              gambar.toString(),
+              fit: BoxFit.cover,
+              height: 180,
+              width: 235,
+            ),
           )
         ],
       ),
