@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ruparupa/componen/akunatas.dart';
+import 'package:ruparupa/profil.dart';
 
 class akunscreen extends StatefulWidget {
   const akunscreen({Key? key}) : super(key: key);
@@ -264,38 +265,44 @@ class _akunscreenState extends State<akunscreen> {
                         )
                       ],
                     ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        primary:
-                            Colors.white, // Warna latar belakang tombol (putih)
-                        onPrimary:
-                            Colors.blue, // Warna teks pada tombol (hitam)
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(0.0),
-                          side: BorderSide(
-                            color: Colors.grey,
-                          ), // Menambahkan border pada tombol
+                    InkWell(
+                      onTap: () => {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Profil()))
+                      },
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors
+                              .white, // Warna latar belakang tombol (putih)
+                          onPrimary:
+                              Colors.blue, // Warna teks pada tombol (hitam)
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(0.0),
+                            side: BorderSide(
+                              color: Colors.grey,
+                            ), // Menambahkan border pada tombol
+                          ),
                         ),
-                      ),
-                      child: Container(
-                        width: double.infinity,
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.symmetric(vertical: 12.0),
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 100.0,
-                            ),
-                            const Icon(
-                              Icons.mode_edit,
-                              size: 15.0,
-                            ),
-                            const SizedBox(
-                              width: 5.0,
-                            ),
-                            Text("Edit Profil"),
-                          ],
+                        child: Container(
+                          width: double.infinity,
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.symmetric(vertical: 12.0),
+                          child: Row(
+                            children: [
+                              const SizedBox(
+                                width: 100.0,
+                              ),
+                              const Icon(
+                                Icons.mode_edit,
+                                size: 15.0,
+                              ),
+                              const SizedBox(
+                                width: 5.0,
+                              ),
+                              Text("Edit Profil"),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -422,8 +429,8 @@ class _akunscreenState extends State<akunscreen> {
                           ),
                           Image.asset(
                             "assets/images/voucher.png",
-                            width: 40.0,
-                            height: 40.0,
+                            width: 45.0,
+                            height: 38.0,
                             fit: BoxFit.fill,
                           ),
                           const SizedBox(
@@ -432,7 +439,7 @@ class _akunscreenState extends State<akunscreen> {
                           Text(
                             "Voucher Saya",
                             style: TextStyle(
-                                fontSize: 9.5,
+                                fontSize: 9,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -508,6 +515,7 @@ class _akunscreenState extends State<akunscreen> {
                           const Icon(
                             Icons.star_border_outlined,
                             size: 35.0,
+                            color: Color.fromARGB(255, 77, 77, 77),
                           ),
                           const SizedBox(
                             height: 2.0,
@@ -515,7 +523,7 @@ class _akunscreenState extends State<akunscreen> {
                           Text(
                             "Ulasan & Nilai",
                             style: TextStyle(
-                              fontSize: 9.5,
+                              fontSize: 9,
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
                             ),
