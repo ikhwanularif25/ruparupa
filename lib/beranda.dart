@@ -2,12 +2,16 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:ruparupa/componen/inspiraasi.dart';
 import 'package:ruparupa/keranjang.dart';
 import 'package:ruparupa/pencarian.dart';
 
 import 'package:ruparupa/pesan.dart';
 import 'package:ruparupa/widgets/beranda/banner_iklan.dart';
 import 'package:ruparupa/widgets/beranda/column_beranda.dart';
+import 'package:ruparupa/widgets/beranda/partners.dart';
+import 'package:ruparupa/widgets/beranda/pilihan.dart';
+import 'package:ruparupa/widgets/beranda/shopinshop.dart';
 import 'package:ruparupa/widgets/beranda/tombol_offers.dart';
 
 class berandascreen extends StatefulWidget {
@@ -121,23 +125,20 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
+                      CustomIconColumn(iconData: Icons.person, text: "Hello"),
+                      SizedBox(width: 15.0),
+                      CustomIconColumn(iconData: Icons.home, text: "Rumah"),
+                      SizedBox(width: 15.0),
+                      CustomIconColumn(iconData: Icons.phone, text: "Telpon"),
+                      SizedBox(width: 15.0),
                       CustomIconColumn(
-                          iconData: Icons.content_cut, text: 'Gunting'),
-                      SizedBox(width: 25.0),
+                          iconData: Icons.beach_access, text: "Pantai"),
+                      SizedBox(width: 15.0),
                       CustomIconColumn(
-                          iconData: Icons.home, text: 'Rumah Tangga'),
-                      SizedBox(width: 25.0),
+                          iconData: Icons.science_sharp, text: "Kimia"),
+                      SizedBox(width: 15.0),
                       CustomIconColumn(
-                          iconData: Icons.phone, text: 'Telepon Rumah'),
-                      SizedBox(width: 25.0),
-                      CustomIconColumn(
-                          iconData: Icons.content_cut, text: 'Gunting'),
-                      SizedBox(width: 25.0),
-                      CustomIconColumn(
-                          iconData: Icons.home, text: 'Rumah Tangga'),
-                      SizedBox(width: 25.0),
-                      CustomIconColumn(
-                          iconData: Icons.phone, text: 'Telepon Rumah'),
+                          iconData: Icons.bookmark, text: "Favorit"),
                     ],
                   ),
                 ),
@@ -146,9 +147,9 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      BannerIklan(img: 'assets/img7.jpg'),
+                      BannerIklan(img: "assets/img7.jpg"),
                       SizedBox(width: 25.0),
-                      BannerIklan(img: 'assets/img8.jpg'),
+                      BannerIklan(img: "assets/img8.jpg"),
                     ],
                   ),
                 ),
@@ -177,27 +178,401 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                       TombolOffers(
                           colorBg: Colors.orange,
                           colorText: Colors.white,
-                          text: 'Weekend Deals'),
-                      SizedBox(width: 7.0),
+                          text: "Weekend Deals"),
+                      SizedBox(width: 10.0),
                       TombolOffers(
                           colorBg: Colors.white,
                           colorText: Colors.orange,
-                          text: 'Gopay Payday'),
-                      SizedBox(width: 7.0),
+                          text: "Gopay Payday"),
+                      SizedBox(width: 10.0),
                       TombolOffers(
                           colorBg: Colors.white,
                           colorText: Colors.orange,
-                          text: 'Weekend Deals'),
+                          text: "Special Online"),
+                      SizedBox(width: 10.0),
+                      TombolOffers(
+                          colorBg: Colors.white,
+                          colorText: Colors.orange,
+                          text: "Penawaran Lainnya"),
                     ],
+                  ),
+                ),
+                Stack(
+                  children: [
+                    ClipRect(
+                      child: Image.asset(
+                        'assets/img9.jpg',
+                      ),
+                    ),
+                    Container(
+                      height: 320,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Container(
+                        margin: EdgeInsets.only(left: 50, top: 50),
+                        child: Row(
+                          children: [
+                            ide1(
+                              gambar: 'assets/images/spatula.png',
+                              nama:
+                                  'Celcio & Co Set Peralatan \nBbq 3 Pcs - Hitam',
+                              hargadiskon: '249.100',
+                              diskon: '10%',
+                              harga: 'Rp224.100',
+                              icon: "assets/images/star.png",
+                              ket: "5 | 1 Ulasan",
+                              icon2: 'assets/images/car.png',
+                              ket2: 'Sameday & Instant',
+                              ketColor2:
+                                  const Color.fromARGB(255, 101, 101, 101),
+                              discolor: const Color.fromARGB(255, 159, 42, 33),
+                            ),
+                            SizedBox(width: 30.0),
+                            ide1(
+                              gambar: 'assets/images/inp1.png',
+                              nama: 'Celcio & Co Pemanggang \nArang Bbq Square',
+                              hargadiskon: '',
+                              diskon: '',
+                              harga: 'Rp1.499.000',
+                              icon: "assets/images/info.png",
+                              ket: "Voucher Diskon",
+                              ketColor1: Colors.red,
+                              ketColor2: Colors.red,
+                              discolor: Colors.white,
+                              icon2: 'assets/images/white.png',
+                              ket2: '',
+                            ),
+                            SizedBox(width: 30.0),
+                            ide1(
+                              gambar: 'assets/images/spatula.png',
+                              nama:
+                                  'Celcio & Co Set Peralatan \nBbq 3 Pcs - Hitam',
+                              hargadiskon: '249.100',
+                              diskon: '10%',
+                              harga: 'Rp224.100',
+                              icon: "assets/images/star.png",
+                              ket: "5 | 1 Ulasan",
+                              icon2: 'assets/images/car.png',
+                              ket2: 'Sameday & Instant',
+                              ketColor2:
+                                  const Color.fromARGB(255, 101, 101, 101),
+                              discolor: const Color.fromARGB(255, 159, 42, 33),
+                            ),
+                            SizedBox(width: 30.0),
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.all<double>(0),
+                    fixedSize:
+                        MaterialStateProperty.all<Size>(Size.fromWidth(330)),
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.white),
+                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                        side: BorderSide(color: Colors.orange),
+                      ),
+                    ),
+                  ),
+                  child: Text(
+                    "Lihat semua weekend deals",
+                    style: TextStyle(
+                      color: Colors.orange,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Container(
+                  height: 2,
+                  color: Colors.grey[300],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      alignment: AlignmentDirectional.centerStart,
+                      margin: EdgeInsets.only(left: 20, top: 40),
+                      child: Text(
+                        "Official Partner",
+                        style: TextStyle(
+                          fontSize: 23,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Container(
+                        margin:
+                            EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                        child: Row(
+                          children: [
+                            Partner(
+                                img: 'assets/logo/informa.png',
+                                partner: 'Informa'),
+                            SizedBox(
+                              width: 20.0,
+                            ),
+                            Partner(
+                                img: 'assets/logo/logoAce.jpg',
+                                partner: 'ACE Online'),
+                            SizedBox(
+                              width: 20.0,
+                            ),
+                            Partner(
+                                img: 'assets/logo/logoToysKingdom.png',
+                                partner: 'Toys Kingdom'),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      alignment: AlignmentDirectional.centerStart,
+                      margin: EdgeInsets.only(left: 20, top: 40),
+                      child: Text(
+                        "Kategori Pilihan Untuk Kamu",
+                        style: TextStyle(
+                          fontSize: 23,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          Pilihan(
+                              img: 'assets/kategori/alatPel.jpg',
+                              text: "Tonggak Pel"),
+                          Pilihan(
+                              img: 'assets/kategori/perlengkapanMakan.jpeg',
+                              text: "Sendok Garpu"),
+                          Pilihan(
+                              img: 'assets/kategori/alatPel.jpg',
+                              text: "Tonggak Pel"),
+                          Pilihan(
+                              img: 'assets/kategori/alatPel.jpg',
+                              text: "Tonggak Pel")
+                        ],
+                      ),
+                    ),
+                    Container(
+                      alignment: AlignmentDirectional.centerStart,
+                      margin: EdgeInsets.only(left: 20, top: 10),
+                      child: Text(
+                        "Shop In Shop",
+                        style: TextStyle(
+                          fontSize: 23,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          ShopInShop(
+                              img: 'assets/kategori/shop1.png',
+                              text: 'Storage Most Wanted'),
+                          ShopInShop(
+                              img: 'assets/kategori/shop1.png',
+                              text: 'Storage Most Wanted'),
+                          ShopInShop(
+                              img: 'assets/kategori/shop1.png',
+                              text: 'Storage Most Wanted')
+                        ],
+                      ),
+                    ),
+                    Container(
+                      alignment: AlignmentDirectional.centerStart,
+                      margin: EdgeInsets.only(left: 20, top: 20),
+                      child: Text(
+                        "Promo Official Partner",
+                        style: TextStyle(
+                          fontSize: 23,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      padding: EdgeInsets.all(20),
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          TombolOffers(
+                              colorBg: Colors.orange,
+                              colorText: Colors.white,
+                              text: "Informa"),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          TombolOffers(
+                              colorBg: Colors.white,
+                              colorText: Colors.orange,
+                              text: "ACE"),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          TombolOffers(
+                              colorBg: Colors.white,
+                              colorText: Colors.orange,
+                              text: "Toys Kingdom"),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          TombolOffers(
+                              colorBg: Colors.white,
+                              colorText: Colors.orange,
+                              text: "Selma"),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          TombolOffers(
+                              colorBg: Colors.white,
+                              colorText: Colors.orange,
+                              text: "Krisbow"),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          TombolOffers(
+                              colorBg: Colors.white,
+                              colorText: Colors.orange,
+                              text: "Ataru"),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+                Stack(
+                  children: [
+                    ClipRect(
+                      child: Image.asset(
+                        'assets/kategori/offerinforma.jpg',
+                      ),
+                    ),
+                    Container(
+                      height: 320,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Container(
+                        margin: EdgeInsets.only(left: 50, top: 50),
+                        child: Row(
+                          children: [
+                            ide1(
+                              gambar: 'assets/images/spatula.png',
+                              nama:
+                                  'Celcio & Co Set Peralatan \nBbq 3 Pcs - Hitam',
+                              hargadiskon: '249.100',
+                              diskon: '10%',
+                              harga: 'Rp224.100',
+                              icon: "assets/images/star.png",
+                              ket: "5 | 1 Ulasan",
+                              icon2: 'assets/images/car.png',
+                              ket2: 'Sameday & Instant',
+                              ketColor2:
+                                  const Color.fromARGB(255, 101, 101, 101),
+                              discolor: const Color.fromARGB(255, 159, 42, 33),
+                            ),
+                            SizedBox(width: 30.0),
+                            ide1(
+                              gambar: 'assets/images/inp1.png',
+                              nama: 'Celcio & Co Pemanggang \nArang Bbq Square',
+                              hargadiskon: '',
+                              diskon: '',
+                              harga: 'Rp1.499.000',
+                              icon: "assets/images/info.png",
+                              ket: "Voucher Diskon",
+                              ketColor1: Colors.red,
+                              ketColor2: Colors.red,
+                              discolor: Colors.white,
+                              icon2: 'assets/images/white.png',
+                              ket2: '',
+                            ),
+                            SizedBox(width: 30.0),
+                            ide1(
+                              gambar: 'assets/images/spatula.png',
+                              nama:
+                                  'Celcio & Co Set Peralatan \nBbq 3 Pcs - Hitam',
+                              hargadiskon: '249.100',
+                              diskon: '10%',
+                              harga: 'Rp224.100',
+                              icon: "assets/images/star.png",
+                              ket: "5 | 1 Ulasan",
+                              icon2: 'assets/images/car.png',
+                              ket2: 'Sameday & Instant',
+                              ketColor2:
+                                  const Color.fromARGB(255, 101, 101, 101),
+                              discolor: const Color.fromARGB(255, 159, 42, 33),
+                            ),
+                            SizedBox(width: 30.0),
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.all<double>(0),
+                    fixedSize:
+                        MaterialStateProperty.all<Size>(Size.fromWidth(330)),
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.white),
+                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                        side: BorderSide(color: Colors.orange),
+                      ),
+                    ),
+                  ),
+                  child: Text(
+                    "Lihat semua produk",
+                    style: TextStyle(
+                      color: Colors.orange,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Container(
+                  height: 2,
+                  color: Colors.grey[300],
+                ),
+                Container(
+                  alignment: AlignmentDirectional.centerStart,
+                  margin: EdgeInsets.only(left: 20, top: 20),
+                  child: Text(
+                    "Penawaran Saat Ini",
+                    style: TextStyle(
+                      fontSize: 23,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 20),
+                  child: ClipRRect(
+                    child: Image.asset('assets/kategori/final.jpg'),
                   ),
                 )
               ],
             ),
             Positioned(
               top: 35,
-              left: 10,
+              left: 20,
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.7,
+                width: MediaQuery.of(context).size.width * 0.65,
                 child: TextField(
                   controller: _textFieldController,
                   autocorrect: false,
@@ -209,10 +584,9 @@ class _CarouselWithIndicatorState extends State<berandascreen> {
                     prefixIcon: InkWell(
                         onTap: () {
                           Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => pencarian()),
-                          );
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => pencarian()));
                         },
                         child: Icon(Icons.search)),
                     hintText: 'Cari Barang Apa?',
