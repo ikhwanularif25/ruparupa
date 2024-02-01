@@ -422,7 +422,7 @@ class _inspirasiscreenState extends State<inspirasiscreen> {
                 judul: "Storage \nSolutions",
                 ket:
                     "Temukan solusi \npenyimpanan untuk \nsemua ruangan agar \nrumah tetap rapi \nsetiap saat",
-                gambar: 'assets/images/homestorage.jpg',
+                gambar: 'assets/images/shopin.jpg',
                 color: Color.fromARGB(221, 217, 228, 234),
               ),
               const SizedBox(
