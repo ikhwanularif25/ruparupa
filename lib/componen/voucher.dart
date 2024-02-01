@@ -1,11 +1,9 @@
-
-
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:ruparupa/promo.dart';
 
-class voucher2 extends StatelessWidget {
-  const voucher2({
+class voucher extends StatelessWidget {
+  const voucher({
     super.key,
     this.produk,
     this.rincian,
@@ -49,10 +47,11 @@ class voucher2 extends StatelessWidget {
             ),
             Row(
               children: [
-                Text("Kode Promo: ",
-                style: TextStyle(
-                fontSize: 12.0,
-                ),
+                Text(
+                  "Kode Promo: ",
+                  style: TextStyle(
+                    fontSize: 12.0,
+                  ),
                 ),
                 Text(
                   kodepromo.toString(),
