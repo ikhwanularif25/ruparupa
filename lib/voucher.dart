@@ -1,7 +1,8 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables, prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:ruparupa/componen/voucher.dart';
+
+import 'package:ruparupa/componen/widgetvoucher.dart';
 
 class Voucher extends StatefulWidget {
   const Voucher({Key? key}) : super(key: key);
