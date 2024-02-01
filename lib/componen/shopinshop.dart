@@ -28,7 +28,7 @@ class shopinshop extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              padding: EdgeInsets.only(left: 5),
+              padding: EdgeInsets.only(left: 10),
               height: 180,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
