@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class voucher extends StatelessWidget {
-  const voucher({
+class voucher2 extends StatelessWidget {
+  const voucher2({
     super.key,
     this.ket1,
     this.ket2,
