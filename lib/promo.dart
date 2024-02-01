@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ruparupa/componen/voucher.dart';
+import 'package:ruparupa/pembayaran.dart';
 
 class promo extends StatefulWidget {
   const promo({Key? key}) : super(key: key);
@@ -211,7 +212,13 @@ class _promoState extends State<promo> {
                         ),
                         Spacer(), // Jarak antara teks dan tombol
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => pembayaran()),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             minimumSize: Size(140, 30), // Set ukuran tombol
                             shape: RoundedRectangleBorder(
