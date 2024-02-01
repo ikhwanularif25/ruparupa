@@ -1,8 +1,11 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:ruparupa/alamat.dart';
 import 'package:ruparupa/componen/akunatas.dart';
+import 'package:ruparupa/componen/refer.dart';
 import 'package:ruparupa/profil.dart';
+import 'package:ruparupa/voucher.dart';
 
 class akunscreen extends StatefulWidget {
   const akunscreen({Key? key}) : super(key: key);
@@ -265,44 +268,41 @@ class _akunscreenState extends State<akunscreen> {
                         )
                       ],
                     ),
-                    InkWell(
-                      onTap: () => {
+                    ElevatedButton(
+                      onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Profil()))
+                            MaterialPageRoute(builder: (context) => Profil()));
                       },
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors
-                              .white, // Warna latar belakang tombol (putih)
-                          onPrimary:
-                              Colors.blue, // Warna teks pada tombol (hitam)
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(0.0),
-                            side: BorderSide(
-                              color: Colors.grey,
-                            ), // Menambahkan border pada tombol
-                          ),
+                      style: ElevatedButton.styleFrom(
+                        primary:
+                            Colors.white, // Warna latar belakang tombol (putih)
+                        onPrimary:
+                            Colors.blue, // Warna teks pada tombol (hitam)
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(0.0),
+                          side: BorderSide(
+                            color: Colors.grey,
+                          ), // Menambahkan border pada tombol
                         ),
-                        child: Container(
-                          width: double.infinity,
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.symmetric(vertical: 12.0),
-                          child: Row(
-                            children: [
-                              const SizedBox(
-                                width: 100.0,
-                              ),
-                              const Icon(
-                                Icons.mode_edit,
-                                size: 15.0,
-                              ),
-                              const SizedBox(
-                                width: 5.0,
-                              ),
-                              Text("Edit Profil"),
-                            ],
-                          ),
+                      ),
+                      child: Container(
+                        width: double.infinity,
+                        alignment: Alignment.center,
+                        padding: EdgeInsets.symmetric(vertical: 12.0),
+                        child: Row(
+                          children: [
+                            const SizedBox(
+                              width: 100.0,
+                            ),
+                            const Icon(
+                              Icons.mode_edit,
+                              size: 15.0,
+                            ),
+                            const SizedBox(
+                              width: 5.0,
+                            ),
+                            Text("Edit Profil"),
+                          ],
                         ),
                       ),
                     ),
@@ -335,8 +335,8 @@ class _akunscreenState extends State<akunscreen> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Aksi ketika tombol ditekan
-                  // Misalnya, tampilkan dialog atau lakukan sesuatu yang relevan
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Alamat()));
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white, // Warna latar belakang tombol (putih)
@@ -381,8 +381,8 @@ class _akunscreenState extends State<akunscreen> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Aksi ketika tombol ditekan
-                  // Misalnya, tampilkan dialog atau lakukan sesuatu yang relevan
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Refer()));
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white, // Warna latar belakang tombol (putih)
@@ -427,11 +427,19 @@ class _akunscreenState extends State<akunscreen> {
                           const SizedBox(
                             height: 10.0,
                           ),
-                          Image.asset(
-                            "assets/images/voucher.png",
-                            width: 45.0,
-                            height: 38.0,
-                            fit: BoxFit.fill,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Voucher()));
+                            },
+                            child: Image.asset(
+                              "assets/images/voucher.png",
+                              width: 45.0,
+                              height: 38.0,
+                              fit: BoxFit.fill,
+                            ),
                           ),
                           const SizedBox(
                             height: 2.0,
